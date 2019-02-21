@@ -1,0 +1,6 @@
+framework module Pods_NyamNyam {
+  umbrella header "Pods-NyamNyam-umbrella.h"
+
+  export *
+  module * { export * }
+}

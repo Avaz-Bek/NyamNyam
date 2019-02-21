@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		5CD10089E11D1D2CEF720D69 /* Pods_NyamNyam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6D168C6661331565482B7B /* Pods_NyamNyam.framework */; };
 		6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF27EB9221CFDB500F34E72 /* AppDelegate.swift */; };
-		6EF27EBC221CFDB500F34E72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF27EBB221CFDB500F34E72 /* ViewController.swift */; };
+		6EF27EBC221CFDB500F34E72 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF27EBB221CFDB500F34E72 /* StartViewController.swift */; };
 		6EF27EBF221CFDB600F34E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EBD221CFDB600F34E72 /* Main.storyboard */; };
 		6EF27EC1221CFDB700F34E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EC0221CFDB700F34E72 /* Assets.xcassets */; };
 		6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EC2221CFDB700F34E72 /* LaunchScreen.storyboard */; };
+		B46C5444221EB62600598CD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46C5443221EB62600598CD8 /* Default-568h@2x.png */; };
+		B46C5447221EB6AB00598CD8 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C5446221EB6AB00598CD8 /* SideBarView.swift */; };
 		B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +23,14 @@
 		5519B4ED7BD51126CE991404 /* Pods-NyamNyam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyamNyam.release.xcconfig"; path = "Target Support Files/Pods-NyamNyam/Pods-NyamNyam.release.xcconfig"; sourceTree = "<group>"; };
 		6EF27EB6221CFDB500F34E72 /* NyamNyam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyamNyam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF27EB9221CFDB500F34E72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6EF27EBB221CFDB500F34E72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6EF27EBB221CFDB500F34E72 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		6EF27EBE221CFDB600F34E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EF27EC0221CFDB700F34E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EF27EC3221CFDB700F34E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EF27EC5221CFDB700F34E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75696AC7A4A8DC04C236DF93 /* Pods-NyamNyam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyamNyam.debug.xcconfig"; path = "Target Support Files/Pods-NyamNyam/Pods-NyamNyam.debug.xcconfig"; sourceTree = "<group>"; };
+		B46C5443221EB62600598CD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B46C5446221EB6AB00598CD8 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +57,7 @@
 		6EF27EAD221CFDB500F34E72 = {
 			isa = PBXGroup;
 			children = (
+				B46C5443221EB62600598CD8 /* Default-568h@2x.png */,
 				6EF27EB8221CFDB500F34E72 /* NyamNyam */,
 				6EF27EB7221CFDB500F34E72 /* Products */,
 				C3B792F61998E127E9CCC88E /* Pods */,
@@ -80,6 +85,22 @@
 			path = NyamNyam;
 			sourceTree = "<group>";
 		};
+		B46C5445221EB68900598CD8 /* SideBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B46C5446221EB6AB00598CD8 /* SideBarView.swift */,
+			);
+			path = SideBarView;
+			sourceTree = "<group>";
+		};
+		B46C5448221EB74C00598CD8 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				6EF27EBB221CFDB500F34E72 /* StartViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 		B4988AFC221D38B900DF0178 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +111,8 @@
 		B4988AFD221D38C600DF0178 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6EF27EBB221CFDB500F34E72 /* ViewController.swift */,
+				B46C5445221EB68900598CD8 /* SideBarView */,
+				B46C5448221EB74C00598CD8 /* Start */,
 				6EF27EBD221CFDB600F34E72 /* Main.storyboard */,
 			);
 			path = View;
@@ -186,6 +208,7 @@
 				6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */,
 				B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */,
 				6EF27EC1221CFDB700F34E72 /* Assets.xcassets in Resources */,
+				B46C5444221EB62600598CD8 /* Default-568h@2x.png in Resources */,
 				6EF27EBF221CFDB600F34E72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EF27EBC221CFDB500F34E72 /* ViewController.swift in Sources */,
+				B46C5447221EB6AB00598CD8 /* SideBarView.swift in Sources */,
+				6EF27EBC221CFDB500F34E72 /* StartViewController.swift in Sources */,
 				6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXRC2Y9BNB;
-				INFOPLIST_FILE = NyamNyam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NyamNyam/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXRC2Y9BNB;
-				INFOPLIST_FILE = NyamNyam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NyamNyam/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
