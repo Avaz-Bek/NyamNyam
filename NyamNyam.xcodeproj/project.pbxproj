@@ -13,6 +13,9 @@
 		6EF27EBF221CFDB600F34E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EBD221CFDB600F34E72 /* Main.storyboard */; };
 		6EF27EC1221CFDB700F34E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EC0221CFDB700F34E72 /* Assets.xcassets */; };
 		6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EC2221CFDB700F34E72 /* LaunchScreen.storyboard */; };
+		B46A202E221FBA1900BF608B /* user.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B46A202D221FBA1900BF608B /* user.jpeg */; };
+		B46A2031221FBF3700BF608B /* SideBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46A202F221FBF3700BF608B /* SideBarTableViewCell.swift */; };
+		B46A2032221FBF3700BF608B /* SideBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46A2030221FBF3700BF608B /* SideBarTableViewCell.xib */; };
 		B46C5444221EB62600598CD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46C5443221EB62600598CD8 /* Default-568h@2x.png */; };
 		B46C5447221EB6AB00598CD8 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C5446221EB6AB00598CD8 /* SideBarView.swift */; };
 		B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */; };
@@ -29,6 +32,9 @@
 		6EF27EC3221CFDB700F34E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EF27EC5221CFDB700F34E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75696AC7A4A8DC04C236DF93 /* Pods-NyamNyam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyamNyam.debug.xcconfig"; path = "Target Support Files/Pods-NyamNyam/Pods-NyamNyam.debug.xcconfig"; sourceTree = "<group>"; };
+		B46A202D221FBA1900BF608B /* user.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpeg; sourceTree = "<group>"; };
+		B46A202F221FBF3700BF608B /* SideBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewCell.swift; sourceTree = "<group>"; };
+		B46A2030221FBF3700BF608B /* SideBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideBarTableViewCell.xib; sourceTree = "<group>"; };
 		B46C5443221EB62600598CD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B46C5446221EB6AB00598CD8 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				B46C5446221EB6AB00598CD8 /* SideBarView.swift */,
+				B46A202F221FBF3700BF608B /* SideBarTableViewCell.swift */,
+				B46A2030221FBF3700BF608B /* SideBarTableViewCell.xib */,
 			);
 			path = SideBarView;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				6EF27EC0221CFDB700F34E72 /* Assets.xcassets */,
+				B46A202D221FBA1900BF608B /* user.jpeg */,
 				6EF27EC2221CFDB700F34E72 /* LaunchScreen.storyboard */,
 				6EF27EC5221CFDB700F34E72 /* Info.plist */,
 				B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */,
@@ -205,10 +214,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46A202E221FBA1900BF608B /* user.jpeg in Resources */,
 				6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */,
 				B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */,
 				6EF27EC1221CFDB700F34E72 /* Assets.xcassets in Resources */,
 				B46C5444221EB62600598CD8 /* Default-568h@2x.png in Resources */,
+				B46A2032221FBF3700BF608B /* SideBarTableViewCell.xib in Resources */,
 				6EF27EBF221CFDB600F34E72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +284,7 @@
 			files = (
 				B46C5447221EB6AB00598CD8 /* SideBarView.swift in Sources */,
 				6EF27EBC221CFDB500F34E72 /* StartViewController.swift in Sources */,
+				B46A2031221FBF3700BF608B /* SideBarTableViewCell.swift in Sources */,
 				6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
