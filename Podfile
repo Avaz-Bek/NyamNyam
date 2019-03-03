@@ -6,8 +6,5 @@ target 'NyamNyam' do
   use_frameworks!
 
   # Pods for NyamNyam
-	pod 'Firebase/Database'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Storage'
 
 end

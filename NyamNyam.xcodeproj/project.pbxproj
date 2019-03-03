@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		5CD10089E11D1D2CEF720D69 /* Pods_NyamNyam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6D168C6661331565482B7B /* Pods_NyamNyam.framework */; };
 		6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF27EB9221CFDB500F34E72 /* AppDelegate.swift */; };
-		6EF27EBC221CFDB500F34E72 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF27EBB221CFDB500F34E72 /* StartViewController.swift */; };
 		6EF27EBF221CFDB600F34E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EBD221CFDB600F34E72 /* Main.storyboard */; };
-		6EF27EC1221CFDB700F34E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EC0221CFDB700F34E72 /* Assets.xcassets */; };
 		6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EC2221CFDB700F34E72 /* LaunchScreen.storyboard */; };
-		B46A202E221FBA1900BF608B /* user.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B46A202D221FBA1900BF608B /* user.jpeg */; };
-		B46A2031221FBF3700BF608B /* SideBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46A202F221FBF3700BF608B /* SideBarTableViewCell.swift */; };
-		B46A2032221FBF3700BF608B /* SideBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46A2030221FBF3700BF608B /* SideBarTableViewCell.xib */; };
+		B44B1E1D222659A600C39B86 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44B1E1B222659A600C39B86 /* GalleryCell.swift */; };
+		B452693E222542D200815A00 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452693D222542D200815A00 /* MenuVC.swift */; };
+		B454DA7F222BEC4500057001 /* LogoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454DA7E222BEC4500057001 /* LogoVC.swift */; };
+		B45F8B27222A5D7F006D3D0C /* GalleryImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */; };
+		B45F8B67222A9F02006D3D0C /* CircularTransition .swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F8B66222A9F02006D3D0C /* CircularTransition .swift */; };
 		B46C5444221EB62600598CD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46C5443221EB62600598CD8 /* Default-568h@2x.png */; };
-		B46C5447221EB6AB00598CD8 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C5446221EB6AB00598CD8 /* SideBarView.swift */; };
 		B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */; };
+		B4A0CCCA22267294000028A2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CCC922267294000028A2 /* LoginVC.swift */; };
+		B4BD366822299F9F00AF6BB4 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BD366722299F9F00AF6BB4 /* GalleryVC.swift */; };
+		B4ED859722225C3C00BA764E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ED859622225C3C00BA764E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,18 +28,20 @@
 		5519B4ED7BD51126CE991404 /* Pods-NyamNyam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyamNyam.release.xcconfig"; path = "Target Support Files/Pods-NyamNyam/Pods-NyamNyam.release.xcconfig"; sourceTree = "<group>"; };
 		6EF27EB6221CFDB500F34E72 /* NyamNyam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyamNyam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF27EB9221CFDB500F34E72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6EF27EBB221CFDB500F34E72 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		6EF27EBE221CFDB600F34E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6EF27EC0221CFDB700F34E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EF27EC3221CFDB700F34E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EF27EC5221CFDB700F34E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75696AC7A4A8DC04C236DF93 /* Pods-NyamNyam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyamNyam.debug.xcconfig"; path = "Target Support Files/Pods-NyamNyam/Pods-NyamNyam.debug.xcconfig"; sourceTree = "<group>"; };
-		B46A202D221FBA1900BF608B /* user.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpeg; sourceTree = "<group>"; };
-		B46A202F221FBF3700BF608B /* SideBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewCell.swift; sourceTree = "<group>"; };
-		B46A2030221FBF3700BF608B /* SideBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideBarTableViewCell.xib; sourceTree = "<group>"; };
+		B44B1E1B222659A600C39B86 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		B452693D222542D200815A00 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		B454DA7E222BEC4500057001 /* LogoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVC.swift; sourceTree = "<group>"; };
+		B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageVC.swift; sourceTree = "<group>"; };
+		B45F8B66222A9F02006D3D0C /* CircularTransition .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircularTransition .swift"; sourceTree = "<group>"; };
 		B46C5443221EB62600598CD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B46C5446221EB6AB00598CD8 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4A0CCC922267294000028A2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B4BD366722299F9F00AF6BB4 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		B4ED859622225C3C00BA764E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,22 +95,40 @@
 			path = NyamNyam;
 			sourceTree = "<group>";
 		};
-		B46C5445221EB68900598CD8 /* SideBarView */ = {
+		B44B1E152226585800C39B86 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B46C5446221EB6AB00598CD8 /* SideBarView.swift */,
-				B46A202F221FBF3700BF608B /* SideBarTableViewCell.swift */,
-				B46A2030221FBF3700BF608B /* SideBarTableViewCell.xib */,
+				B452693D222542D200815A00 /* MenuVC.swift */,
+				B4A0CCC922267294000028A2 /* LoginVC.swift */,
+				B4BD366722299F9F00AF6BB4 /* GalleryVC.swift */,
+				B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */,
+				B454DA7E222BEC4500057001 /* LogoVC.swift */,
 			);
-			path = SideBarView;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		B46C5448221EB74C00598CD8 /* Start */ = {
+		B44B1E192226597D00C39B86 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				6EF27EBB221CFDB500F34E72 /* StartViewController.swift */,
+				B44B1E1A2226598600C39B86 /* GalleryCell */,
 			);
-			path = Start;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B44B1E1A2226598600C39B86 /* GalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				B44B1E1B222659A600C39B86 /* GalleryCell.swift */,
+			);
+			path = GalleryCell;
+			sourceTree = "<group>";
+		};
+		B45F8B65222A9EE5006D3D0C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B45F8B66222A9F02006D3D0C /* CircularTransition .swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		B4988AFC221D38B900DF0178 /* Model */ = {
@@ -119,8 +141,9 @@
 		B4988AFD221D38C600DF0178 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B46C5445221EB68900598CD8 /* SideBarView */,
-				B46C5448221EB74C00598CD8 /* Start */,
+				B45F8B65222A9EE5006D3D0C /* Animations */,
+				B44B1E192226597D00C39B86 /* Cell */,
+				B44B1E152226585800C39B86 /* Controller */,
 				6EF27EBD221CFDB600F34E72 /* Main.storyboard */,
 			);
 			path = View;
@@ -136,8 +159,7 @@
 		B4988AFF221D38FB00DF0178 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6EF27EC0221CFDB700F34E72 /* Assets.xcassets */,
-				B46A202D221FBA1900BF608B /* user.jpeg */,
+				B4ED859622225C3C00BA764E /* Assets.xcassets */,
 				6EF27EC2221CFDB700F34E72 /* LaunchScreen.storyboard */,
 				6EF27EC5221CFDB700F34E72 /* Info.plist */,
 				B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */,
@@ -165,7 +187,6 @@
 				6EF27EB2221CFDB500F34E72 /* Sources */,
 				6EF27EB3221CFDB500F34E72 /* Frameworks */,
 				6EF27EB4221CFDB500F34E72 /* Resources */,
-				CAD583B007FABCE429A4BD00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,12 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46A202E221FBA1900BF608B /* user.jpeg in Resources */,
 				6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */,
 				B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */,
-				6EF27EC1221CFDB700F34E72 /* Assets.xcassets in Resources */,
 				B46C5444221EB62600598CD8 /* Default-568h@2x.png in Resources */,
-				B46A2032221FBF3700BF608B /* SideBarTableViewCell.xib in Resources */,
+				B4ED859722225C3C00BA764E /* Assets.xcassets in Resources */,
 				6EF27EBF221CFDB600F34E72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,32 +246,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CAD583B007FABCE429A4BD00 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NyamNyam/Pods-NyamNyam-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NyamNyam/Pods-NyamNyam-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DD652C745B0E7C51DB3B5DE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,10 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46C5447221EB6AB00598CD8 /* SideBarView.swift in Sources */,
-				6EF27EBC221CFDB500F34E72 /* StartViewController.swift in Sources */,
-				B46A2031221FBF3700BF608B /* SideBarTableViewCell.swift in Sources */,
+				B44B1E1D222659A600C39B86 /* GalleryCell.swift in Sources */,
+				B454DA7F222BEC4500057001 /* LogoVC.swift in Sources */,
+				B45F8B27222A5D7F006D3D0C /* GalleryImageVC.swift in Sources */,
+				B45F8B67222A9F02006D3D0C /* CircularTransition .swift in Sources */,
+				B4BD366822299F9F00AF6BB4 /* GalleryVC.swift in Sources */,
 				6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */,
+				B4A0CCCA22267294000028A2 /* LoginVC.swift in Sources */,
+				B452693E222542D200815A00 /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +429,7 @@
 			baseConfigurationReference = 75696AC7A4A8DC04C236DF93 /* Pods-NyamNyam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXRC2Y9BNB;
 				INFOPLIST_FILE = "$(SRCROOT)/NyamNyam/Resources/Info.plist";
@@ -441,6 +439,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = aranei.NyamNyam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,6 +450,7 @@
 			baseConfigurationReference = 5519B4ED7BD51126CE991404 /* Pods-NyamNyam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXRC2Y9BNB;
 				INFOPLIST_FILE = "$(SRCROOT)/NyamNyam/Resources/Info.plist";
@@ -460,6 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = aranei.NyamNyam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

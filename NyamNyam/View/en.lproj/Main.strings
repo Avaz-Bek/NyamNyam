@@ -1,0 +1,66 @@
+
+/* Class = "UITableViewController"; title = "Позвонить"; ObjectID = "0Pu-J0-aof"; */
+"0Pu-J0-aof.title" = "Позвонить";
+
+/* Class = "UITabBarItem"; title = "Меню"; ObjectID = "0rI-fR-77j"; */
+"0rI-fR-77j.title" = "Меню";
+
+/* Class = "UIBarButtonItem"; title = "dsf"; ObjectID = "5ch-cj-jMC"; */
+"5ch-cj-jMC.title" = "dsf";
+
+/* Class = "UILabel"; text = "Версия приложения 1.0.1"; ObjectID = "5x6-2r-9X8"; */
+"5x6-2r-9X8.text" = "Версия приложения 1.0.1";
+
+/* Class = "UILabel"; text = "Акции"; ObjectID = "7vf-tn-VuY"; */
+"7vf-tn-VuY.text" = "Акции";
+
+/* Class = "UIViewController"; title = "Меню"; ObjectID = "8Ng-F1-0tC"; */
+"8Ng-F1-0tC.title" = "Меню";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "Kwt-SC-kU3"; */
+"Kwt-SC-kU3.headerTitle" = " ";
+
+/* Class = "UILabel"; text = "Войти"; ObjectID = "Mdt-Hy-gyJ"; */
+"Mdt-Hy-gyJ.text" = "Войти";
+
+/* Class = "UINavigationController"; title = "Меню"; ObjectID = "N3U-xd-tTw"; */
+"N3U-xd-tTw.title" = "Меню";
+
+/* Class = "UIViewController"; title = "Галерея"; ObjectID = "Oji-Hl-GRB"; */
+"Oji-Hl-GRB.title" = "Галерея";
+
+/* Class = "UIViewController"; title = "Новости"; ObjectID = "QfP-Tv-4oS"; */
+"QfP-Tv-4oS.title" = "Новости";
+
+/* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "Ral-eC-DFz"; */
+"Ral-eC-DFz.title" = "Профиль";
+
+/* Class = "UILabel"; text = "Корзина"; ObjectID = "UAS-fJ-6TU"; */
+"UAS-fJ-6TU.text" = "Корзина";
+
+/* Class = "UITabBarItem"; title = "Позвонить"; ObjectID = "XCu-h0-luo"; */
+"XCu-h0-luo.title" = "Позвонить";
+
+/* Class = "UITabBarItem"; title = "Новости"; ObjectID = "Yxf-Qf-YRz"; */
+"Yxf-Qf-YRz.title" = "Новости";
+
+/* Class = "UINavigationItem"; prompt = "dfsf"; ObjectID = "a0P-HH-y8I"; */
+"a0P-HH-y8I.prompt" = "dfsf";
+
+/* Class = "UINavigationItem"; title = "Меню"; ObjectID = "a0P-HH-y8I"; */
+"a0P-HH-y8I.title" = "Меню";
+
+/* Class = "UITableViewController"; title = "Профиль"; ObjectID = "aDl-Ze-EGa"; */
+"aDl-Ze-EGa.title" = "Профиль";
+
+/* Class = "UITabBarController"; title = "Меню"; ObjectID = "mG8-b3-OGY"; */
+"mG8-b3-OGY.title" = "Меню";
+
+/* Class = "UILabel"; text = "Карта"; ObjectID = "o0D-d9-f8F"; */
+"o0D-d9-f8F.text" = "Карта";
+
+/* Class = "UILabel"; text = "Пункт2"; ObjectID = "qg5-6g-JAa"; */
+"qg5-6g-JAa.text" = "Пункт2";
+
+/* Class = "UITabBarItem"; title = "Галерея"; ObjectID = "xiQ-Dv-d4Y"; */
+"xiQ-Dv-d4Y.title" = "Галерея";
