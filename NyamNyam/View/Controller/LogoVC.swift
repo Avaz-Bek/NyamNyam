@@ -10,31 +10,45 @@ import UIKit
 
 class LogoVC: UITableViewController {
 
-    @IBOutlet weak var logoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        logoImageView.layer.masksToBounds = true
-        logoImageView.layer.cornerRadius = 300
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromRight
+            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            view.window!.layer.add(transition, forKey: kCATransition)
+            if let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GalleryImageVC") as? GalleryVC {
+                
+                self.present(secondVC, animated: true, completion: nil)
+                
+                
+            }
+        }else if indexPath.row == 1{
+            print("2")
+        }else if indexPath.row == 2{
+            let activityViewController = UIActivityViewController(activityItems: ["www.google.com"], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

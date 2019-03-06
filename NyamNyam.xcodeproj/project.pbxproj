@@ -11,8 +11,9 @@
 		6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF27EB9221CFDB500F34E72 /* AppDelegate.swift */; };
 		6EF27EBF221CFDB600F34E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EBD221CFDB600F34E72 /* Main.storyboard */; };
 		6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF27EC2221CFDB700F34E72 /* LaunchScreen.storyboard */; };
+		B429F278222E3E26000033EC /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429F277222E3E26000033EC /* MenuVC.swift */; };
+		B429F27C222E665C000033EC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429F27B222E665C000033EC /* MenuCell.swift */; };
 		B44B1E1D222659A600C39B86 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44B1E1B222659A600C39B86 /* GalleryCell.swift */; };
-		B452693E222542D200815A00 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452693D222542D200815A00 /* MenuVC.swift */; };
 		B454DA7F222BEC4500057001 /* LogoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454DA7E222BEC4500057001 /* LogoVC.swift */; };
 		B45F8B27222A5D7F006D3D0C /* GalleryImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */; };
 		B45F8B67222A9F02006D3D0C /* CircularTransition .swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F8B66222A9F02006D3D0C /* CircularTransition .swift */; };
@@ -32,8 +33,9 @@
 		6EF27EC3221CFDB700F34E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EF27EC5221CFDB700F34E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75696AC7A4A8DC04C236DF93 /* Pods-NyamNyam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyamNyam.debug.xcconfig"; path = "Target Support Files/Pods-NyamNyam/Pods-NyamNyam.debug.xcconfig"; sourceTree = "<group>"; };
+		B429F277222E3E26000033EC /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		B429F27B222E665C000033EC /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		B44B1E1B222659A600C39B86 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
-		B452693D222542D200815A00 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		B454DA7E222BEC4500057001 /* LogoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVC.swift; sourceTree = "<group>"; };
 		B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageVC.swift; sourceTree = "<group>"; };
 		B45F8B66222A9F02006D3D0C /* CircularTransition .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircularTransition .swift"; sourceTree = "<group>"; };
@@ -98,11 +100,11 @@
 		B44B1E152226585800C39B86 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B452693D222542D200815A00 /* MenuVC.swift */,
 				B4A0CCC922267294000028A2 /* LoginVC.swift */,
 				B4BD366722299F9F00AF6BB4 /* GalleryVC.swift */,
 				B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */,
 				B454DA7E222BEC4500057001 /* LogoVC.swift */,
+				B429F277222E3E26000033EC /* MenuVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B44B1E1B222659A600C39B86 /* GalleryCell.swift */,
+				B429F27B222E665C000033EC /* MenuCell.swift */,
 			);
 			path = GalleryCell;
 			sourceTree = "<group>";
@@ -277,12 +280,13 @@
 			files = (
 				B44B1E1D222659A600C39B86 /* GalleryCell.swift in Sources */,
 				B454DA7F222BEC4500057001 /* LogoVC.swift in Sources */,
+				B429F27C222E665C000033EC /* MenuCell.swift in Sources */,
 				B45F8B27222A5D7F006D3D0C /* GalleryImageVC.swift in Sources */,
 				B45F8B67222A9F02006D3D0C /* CircularTransition .swift in Sources */,
 				B4BD366822299F9F00AF6BB4 /* GalleryVC.swift in Sources */,
 				6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */,
+				B429F278222E3E26000033EC /* MenuVC.swift in Sources */,
 				B4A0CCCA22267294000028A2 /* LoginVC.swift in Sources */,
-				B452693E222542D200815A00 /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
