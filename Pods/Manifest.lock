@@ -1,3 +1,29 @@
-PODFILE CHECKSUM: f3c00e643e642d78daf218b9f6ce42193689de19
+PODS:
+  - Cartography (3.1.0)
+  - GoogleMaps (3.0.2):
+    - GoogleMaps/Maps (= 3.0.2)
+  - GoogleMaps/Base (3.0.2)
+  - GoogleMaps/Maps (3.0.2):
+    - GoogleMaps/Base
+  - GooglePlaces (3.0.2):
+    - GoogleMaps/Base (= 3.0.2)
 
-COCOAPODS: 1.6.0
+DEPENDENCIES:
+  - Cartography (~> 3.0)
+  - GoogleMaps
+  - GooglePlaces
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cartography
+    - GoogleMaps
+    - GooglePlaces
+
+SPEC CHECKSUMS:
+  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
+  GoogleMaps: 941cd655e009b4d8e42df19a3d749bc3fccec973
+  GooglePlaces: c086e0055dc5f0177d7c9d65fc77a1734f9a4825
+
+PODFILE CHECKSUM: 2f09e0728d7ad89e4198f29dc2b4da0eb12dcc1e
+
+COCOAPODS: 1.6.1

@@ -26,13 +26,123 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NyamNyam/View/Controller/LoginVC.swift"
-            timestampString = "573560737.445536"
+            timestampString = "573669093.843231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
             endingLineNumber = "137"
             landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NyamNyam/View/Controller/MenuVC.swift"
+            timestampString = "574454432.91539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NyamNyam/View/Controller/AboutFood/AboutFoodCVC.swift"
+            timestampString = "574454432.916191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "tapedHeart()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NyamNyam/View/Cell/Menu/Foods/FoodsVCCell.swift"
+            timestampString = "575127658.453416"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "FoodsVCCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NyamNyam.FoodsVCCell.tripperLabelValue.getter : Swift.Int"
+                  moduleName = "NyamNyam"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avazbek/Documents/GitHubproject/NyamNyam/NyamNyam/View/Cell/Menu/Foods/FoodsVCCell.swift"
+                  timestampString = "574793434.7443531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NyamNyam.FoodsVCCell.tripperLabelValue.setter : Swift.Int"
+                  moduleName = "NyamNyam"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avazbek/Documents/GitHubproject/NyamNyam/NyamNyam/View/Cell/Menu/Foods/FoodsVCCell.swift"
+                  timestampString = "574793434.746682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NyamNyam.FoodsVCCell.init(frame: __C.CGRect) -&gt; NyamNyam.FoodsVCCell"
+                  moduleName = "NyamNyam"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avazbek/Documents/GitHubproject/NyamNyam/NyamNyam/View/Cell/Menu/Foods/FoodsVCCell.swift"
+                  timestampString = "574793434.749427"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NyamNyam.FoodsVCCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NyamNyam.FoodsVCCell&gt;"
+                  moduleName = "NyamNyam"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avazbek/Documents/GitHubproject/NyamNyam/NyamNyam/View/Cell/Menu/Foods/FoodsVCCell.swift"
+                  timestampString = "574793434.752093"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "967">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
