@@ -7,13 +7,14 @@
 //
 
 import UIKit
-protocol AboutFoodDelegate: class {
-    func tapedHeart()
+protocol FoodsDelegate: class {
+    func didTapOrderButton(_ sender:FoodsVCCell,_ btn:UIButton)
+    func didTapHeartButton(_ btn:UIButton)
 }
 
 class FoodsVCCell: UICollectionViewCell {
     
-    var delegate: AboutFoodDelegate?
+    var delegate: FoodsDelegate?
     
     //MARK : outlets
     @IBOutlet weak var foodName: UILabel!
@@ -44,25 +45,12 @@ class FoodsVCCell: UICollectionViewCell {
         // Initialization code
     }
     
-    
-    @IBAction func tapedHeart(_ sender: UIButton) {
-        if let delegate = self.delegate{
-            delegate.tapedHeart()
-            
-        }
-    }
-    
     //MARK:Actions
     @IBAction func favouriteButtonClick(_ sender: UIButton) {
         
-        if sender.tag == 0 {
-            favoriteButton.setImage(UIImage(named: "heart-cencel"), for: UIControl.State.normal)
-            sender.tag += 1
-        }else if sender.tag == 1{
-            favoriteButton.setImage(UIImage(named: "heart-ok"), for: UIControl.State.normal)
-            sender.tag -= 1
+        if let delegate = self.delegate{
+            delegate.didTapHeartButton(sender)
         }
-        
     }
     
     @IBAction func leftButtonClick(_ sender: UIButton) {
@@ -84,6 +72,13 @@ class FoodsVCCell: UICollectionViewCell {
             //weightValue += weightOldValue
             tripperLabel.text = String(tripperLabelValue)
             //weightLabel.text = String(weightValue) + "гр"
+        }
+    }
+    
+    
+    @IBAction func orderButtonTapped(_ sender: UIButton) {
+        if let delegate = self.delegate{
+            delegate.didTapOrderButton(self, sender)
         }
     }
     

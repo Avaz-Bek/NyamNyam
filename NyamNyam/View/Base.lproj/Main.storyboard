@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mG8-b3-OGY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFE-CY-slV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ZG1-Wg-WYL">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6RM-gR-BoL">
                         <autoresizingMask key="autoresizingMask"/>
@@ -38,6 +39,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Txv-Bv-R33">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Wd6-Ru-jes" kind="relationship" relationship="rootViewController" id="8LU-dk-wdd"/>
@@ -57,7 +59,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8sR-FU-f9G">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c14-Vl-cVV">
                                     <size key="itemSize" width="249" height="206"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -122,7 +124,7 @@
                     <navigationItem key="navigationItem" title="Меню" id="B3Y-wZ-fK5"/>
                     <connections>
                         <outlet property="myCollectionView" destination="8sR-FU-f9G" id="CXd-LK-MTs"/>
-                        <segue destination="akF-3v-fX8" kind="show" identifier="showMenuDetailVC" id="kqU-U2-ci4"/>
+                        <segue destination="akF-3v-fX8" kind="show" identifier="FoodsVC" id="kqU-U2-ci4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7O-Hg-lZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,7 +138,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SLP-Rd-OCl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Er-Vd-iOd">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -251,6 +253,28 @@
             </objects>
             <point key="canvasLocation" x="-2047" y="1781"/>
         </scene>
+        <!--OrderVC-->
+        <scene sceneID="S56-0g-fa4">
+            <objects>
+                <viewController storyboardIdentifier="OrderVC" id="Oes-w3-e2o" customClass="OrderVC" customModule="NyamNyam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wKo-vx-9fp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4Na-uE-OqC"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="SmN-9f-SMg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TfL-eW-PxR">
+                            <connections>
+                                <action selector="dismissButton:" destination="Oes-w3-e2o" id="wSv-Kb-IW2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSv-u5-0ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2807" y="3154"/>
+        </scene>
         <!--Позвонить-->
         <scene sceneID="qY0-O0-9hR">
             <objects>
@@ -258,7 +282,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" id="rvb-vl-xHH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="9Qa-JQ-0yo">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -284,7 +308,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hoT-1R-UuT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="40d-98-Aq3">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -329,6 +353,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rT3-9J-go5">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="d9n-qe-2hK" kind="relationship" relationship="rootViewController" id="Jqm-sk-eXx"/>
@@ -342,11 +367,11 @@
         <scene sceneID="JyE-QH-QyW">
             <objects>
                 <navigationController id="3N9-rs-RTv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Профиль" image="setting" springLoaded="YES" id="63K-pL-MyM"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="profile" springLoaded="YES" id="63K-pL-MyM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="iH7-oI-vaC">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="aDl-Ze-EGa" kind="relationship" relationship="rootViewController" id="IRz-bM-IfP"/>
@@ -372,10 +397,10 @@
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Oww-4e-ihc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.93725490196078431" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.93725490196078431" alpha="0.0" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="Oww-4e-ihc" secondAttribute="bottom" id="afR-it-39d"/>
                                 <constraint firstItem="Oww-4e-ihc" firstAttribute="top" secondItem="whR-pq-N6l" secondAttribute="top" id="cYx-lR-HIt"/>
@@ -393,7 +418,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="percent" translatesAutoresizingMaskIntoConstraints="NO" id="qXO-19-pv1">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basket" translatesAutoresizingMaskIntoConstraints="NO" id="qXO-19-pv1">
                                                     <rect key="frame" x="16" y="2.5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="6yg-2j-jsP"/>
@@ -500,12 +525,49 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="eB1-gf-4Qc">
+                                        <rect key="frame" x="0.0" y="372" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eB1-gf-4Qc" id="POR-Yr-kJ1">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="Kdi-mM-cJm">
+                                                    <rect key="frame" x="16" y="1" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="3Fi-ye-U05"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Inl-9t-eYg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заказат столика" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP2-VW-y71">
+                                                    <rect key="frame" x="64" y="1" width="131" height="42.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42.5" id="po0-ER-RzB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JP2-VW-y71" firstAttribute="leading" secondItem="Kdi-mM-cJm" secondAttribute="trailing" constant="8" id="AVU-2i-Yh0"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kdi-mM-cJm" secondAttribute="bottom" constant="2.5" id="E0e-PV-d6C"/>
+                                                <constraint firstItem="JP2-VW-y71" firstAttribute="leading" secondItem="Kdi-mM-cJm" secondAttribute="trailing" constant="8" id="KVi-Bt-WkA"/>
+                                                <constraint firstItem="Kdi-mM-cJm" firstAttribute="top" secondItem="POR-Yr-kJ1" secondAttribute="top" constant="1" id="Lws-GB-opb"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JP2-VW-y71" secondAttribute="trailing" constant="16" id="OOz-Y7-As1"/>
+                                                <constraint firstAttribute="bottom" secondItem="JP2-VW-y71" secondAttribute="bottom" id="bWR-Bp-P0n"/>
+                                                <constraint firstItem="JP2-VW-y71" firstAttribute="top" secondItem="POR-Yr-kJ1" secondAttribute="top" constant="1" id="gvP-Jm-Hxn"/>
+                                                <constraint firstItem="Kdi-mM-cJm" firstAttribute="leading" secondItem="POR-Yr-kJ1" secondAttribute="leading" constant="16" id="vFE-3Z-pSR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="qd2-FV-fOS">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" rowHeight="40" id="Zj6-8c-oiI">
-                                        <rect key="frame" x="0.0" y="408" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="452" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zj6-8c-oiI" id="LOo-FP-awP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
@@ -535,7 +597,7 @@
                             <tableViewSection id="n57-EJ-ZkQ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="40" id="Djx-Ng-9x6">
-                                        <rect key="frame" x="0.0" y="484" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="528" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Djx-Ng-9x6" id="6xQ-H9-bdr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
@@ -594,7 +656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Jc-gP-2c9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="187"/>
+            <point key="canvasLocation" x="1345" y="348"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SKB-Fu-rI5">
@@ -609,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tz8-6h-Y0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="1012"/>
+            <point key="canvasLocation" x="1345" y="1012"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aaS-3c-Axi">
@@ -624,7 +686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnF-kR-jd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="1781"/>
+            <point key="canvasLocation" x="1345" y="1695"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="naE-XQ-z2u">
@@ -633,6 +695,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ng7-NE-kAt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Q76-iL-S8V" kind="relationship" relationship="rootViewController" id="Xg5-ns-Zk3"/>
@@ -692,6 +755,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xED-gN-Mer">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eac-0e-OJW">
@@ -705,17 +769,36 @@
             </objects>
             <point key="canvasLocation" x="-2807" y="166"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XL1-Rv-FY1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NFE-CY-slV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EBn-8S-tax">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Oes-w3-e2o" kind="relationship" relationship="rootViewController" id="BJF-hU-9aF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIg-Di-SKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2807.1999999999998" y="2471.5142428785607"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="2" width="360" height="360"/>
-        <image name="call" width="22.5" height="22.5"/>
+        <image name="2" width="480" height="480"/>
+        <image name="basket" width="42.5" height="42.5"/>
+        <image name="call" width="30" height="30"/>
         <image name="cart" width="128" height="128"/>
-        <image name="gallery" width="22.5" height="22.5"/>
+        <image name="gallery" width="30" height="30"/>
         <image name="logo" width="800" height="800"/>
-        <image name="map" width="22.5" height="22.5"/>
-        <image name="menu" width="22.5" height="22.5"/>
-        <image name="percent" width="128" height="128"/>
-        <image name="setting" width="30" height="30"/>
+        <image name="map" width="30" height="30"/>
+        <image name="menu" width="30" height="30"/>
+        <image name="profile" width="30" height="30"/>
         <image name="share" width="128" height="128"/>
     </resources>
 </document>

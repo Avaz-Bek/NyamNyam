@@ -11,14 +11,15 @@ import UIKit
 private let reuseIdentifier = "menuItemIdentifier"
 
 class MenuVC: UIViewController{
-
+    
     
     //MARK: - Outlets
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     
     // MARK: - Properties
-    let mainFoodsName:[String]  = ["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"]
+    let mainFoodsName:[[String]]  = [   ["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"]
+    ]
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -49,29 +50,31 @@ class MenuVC: UIViewController{
         
         myCollectionView.collectionViewLayout = layout
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == "MenuDetailVC" {
-            if let indexPath = myCollectionView.indexPathsForSelectedItems{
-                let menuDetialVC = segue.destination as! MenuDetailVC
-                
-            }
-        }
-    }*/
- 
-
+    
+    
+//      MARK: - Navigation
+    
+//      In a storyboard-based application, you will often want to do a little preparation before navigation
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        if segue.identifier == "FoodsVC" {
+//
+//        if let indexPath = self.myCollectionView.indexPathsForSelectedItems{
+//            let foodsVC = segue.destination as! FoodsVC
+//                foodsVC.imageNameArray = self.mainFoodsName[indexPath]
+//
+//            }
+//        }
+//     }
+    
+    
 }
 
 
-    // MARK: - Data source
+// MARK: - Data source
 extension MenuVC:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return mainFoodsName.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,14 +84,14 @@ extension MenuVC:UICollectionViewDelegate,UICollectionViewDataSource{
         
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius  = 10
-
+        
         cell.menuItemImage.layer.masksToBounds = true
         cell.menuItemImage.layer.cornerRadius = 10
         cell.menuItemImage.translatesAutoresizingMaskIntoConstraints  = false
         cell.menuItemImage.contentMode = .scaleAspectFill
-        //cell.menuItemImage.image = UIImage(named: mainFoodsName[indexPath.row] )
+        //cell.menuItemImage.image = UIImage(named: mainFoodsName[indexPath.row][indexPath.row] )
         
-        //cell.menuItemName.text = mainFoodsName[indexPath.row]
+        //cell.menuItemName.text = mainFoodsName[indexPath.row][indexPath.row]
         //cell.menuItemName.font = UIFont(name: "Montserrat-Regular", size: 20)
         
         return cell
@@ -96,13 +99,16 @@ extension MenuVC:UICollectionViewDelegate,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FoodsVC") is FoodsVC {
-            self.performSegue(withIdentifier: "showMenuDetailVC", sender: nil)
-            }
-
-        
+        if let foodsVC = self.storyboard?.instantiateViewController(withIdentifier: "FoodsVC") as?  FoodsVC {
+            foodsVC.imageNameArray = self.mainFoodsName[indexPath.row]
+            
+            print(mainFoodsName[indexPath.row])
+            print(foodsVC.imageNameArray)
+            
+            self.navigationController?.pushViewController(foodsVC, animated: true)
         }
     }
+}
 
 
 extension MenuVC:UISearchBarDelegate{

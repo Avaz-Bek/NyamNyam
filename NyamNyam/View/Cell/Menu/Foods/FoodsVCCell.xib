@@ -41,6 +41,9 @@
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="orderButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="kPg-Nx-Vwf"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xyO-Gc-PK8">
                         <rect key="frame" x="136" y="30" width="77.5" height="20.5"/>
@@ -60,7 +63,6 @@
                         </state>
                         <connections>
                             <action selector="favouriteButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Gvl-2j-rsL"/>
-                            <action selector="tapedHeart:" destination="gTV-IL-0wX" eventType="touchUpInside" id="GV1-g9-KVJ"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d9V-mC-ftW">
