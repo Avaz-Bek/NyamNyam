@@ -39,6 +39,7 @@
 		B43B8863224BD5A500532220 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B885D224BD5A500532220 /* IQPreviousNextView.swift */; };
 		B43B8864224BD5A500532220 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B885E224BD5A500532220 /* IQToolbar.swift */; };
 		B43B8867224BD5EE00532220 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B43B8866224BD5EE00532220 /* IQKeyboardManager.bundle */; };
+		B446D259224CE86B0031BBED /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B446D258224CE86B0031BBED /* DataExtension.swift */; };
 		B44B1E1D222659A600C39B86 /* GalleryVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44B1E1B222659A600C39B86 /* GalleryVCCell.swift */; };
 		B454DA7F222BEC4500057001 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454DA7E222BEC4500057001 /* SettingVC.swift */; };
 		B45F8B27222A5D7F006D3D0C /* GalleryImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */; };
@@ -96,6 +97,7 @@
 		B43B885D224BD5A500532220 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
 		B43B885E224BD5A500532220 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		B43B8866224BD5EE00532220 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		B446D258224CE86B0031BBED /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		B44B1E1B222659A600C39B86 /* GalleryVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVCCell.swift; sourceTree = "<group>"; };
 		B454DA7E222BEC4500057001 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageVC.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				B476CCEA2249354500A659E8 /* OrderVC.swift */,
+				B446D258224CE86B0031BBED /* DataExtension.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				B4C7FA1222477CA400848590 /* VacationDestination.swift in Sources */,
 				B4FB88EC22319C4B008BF05F /* MenuDetailCell.swift in Sources */,
 				B429F27C222E665C000033EC /* MenuCell.swift in Sources */,
+				B446D259224CE86B0031BBED /* DataExtension.swift in Sources */,
 				B43B8862224BD5A500532220 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				B45F8B27222A5D7F006D3D0C /* GalleryImageVC.swift in Sources */,
 				B43B8864224BD5A500532220 /* IQToolbar.swift in Sources */,

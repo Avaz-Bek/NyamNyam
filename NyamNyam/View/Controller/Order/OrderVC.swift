@@ -10,7 +10,13 @@ import UIKit
 
 class OrderVC: UIViewController,UITextFieldDelegate{
     
-    //MARK: - nametextfield
+    
+    //    MARK: - properties
+    
+    var paymentMethods = ["Наличными","Безналичный"]
+    var deliverMethods = ["Курьерская доставка","Самовывоз"]
+    
+    //    MARK: - nametextfield
     var nameTextField:UITextField = {
         let tf = UITextField()
         tf.frame = CGRect(x: 16, y: 32, width: 375, height: 31)
@@ -77,51 +83,54 @@ class OrderVC: UIViewController,UITextFieldDelegate{
     }()
     
     //    MARK: - paymentMethod
-    var paymentMethodButton:UIButton = {
-        let button = UIButton()
-        button.frame = CGRect(x: 16, y: 0, width: 375, height: 30)
-        let buttonBounds:CGFloat = button.bounds.size.height
-        button.setTitle("Способ оплаты", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.layer.cornerRadius = 0.3 * buttonBounds
-        button.layer.masksToBounds = true
-        button.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
-        button.titleLabel?.font = UIFont(name: "Helvetica", size: 16)
-        button.addTarget(self, action: #selector(handlePayButton), for: .touchUpInside)
-        return button
+    var paymentMethodTextField:UITextField = {
+        let tf = UITextField()
+        tf.frame = CGRect(x: 16, y: 0, width: 375, height: 31)
+        let tfBounds:CGFloat = tf.bounds.size.height
+        tf.textAlignment = .center
+        tf.attributedPlaceholder = NSAttributedString(string:"Способ оплаты", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.keyboardType = .default
+        tf.textColor = UIColor.white
+        tf.layer.cornerRadius = 0.3 * tfBounds
+        tf.layer.borderWidth = 0.5
+        tf.layer.borderColor = UIColor.white.cgColor
+        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
+        return tf
     }()
     
     //    MARK: - deliveryMethod
-    var deliveryMethodButton:UIButton = {
-        let button = UIButton()
-        button.frame = CGRect(x: 16, y: 0, width: 375, height: 30)
-        let buttonBounds:CGFloat = button.bounds.size.height
-        button.setTitle("Способ доставки", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.layer.cornerRadius = 0.3 * buttonBounds
-        button.layer.masksToBounds = true
-        button.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
-        button.titleLabel?.font = UIFont(name: "Helvetica", size: 16)
-        button.addTarget(self, action: #selector(handlePayButton), for: .touchUpInside)
-        return button
+    var deliveryMethodTextField:UITextField = {
+        let tf = UITextField()
+        tf.frame = CGRect(x: 16, y: 0, width: 375, height: 31)
+        let tfBounds:CGFloat = tf.bounds.size.height
+        tf.textAlignment = .center
+        tf.attributedPlaceholder = NSAttributedString(string:"Способ доставки", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.keyboardType = .default
+        tf.textColor = UIColor.white
+        tf.layer.cornerRadius = 0.3 * tfBounds
+        tf.layer.borderWidth = 0.5
+        tf.layer.borderColor = UIColor.white.cgColor
+        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
+        return tf
     }()
     
     //    MARK: - deliveryMethod
-    var timeDeliverButton:UIButton = {
-        let button = UIButton()
-        button.frame = CGRect(x: 16, y: 0, width: 375, height: 30)
-        let buttonBounds:CGFloat = button.bounds.size.height
-        button.setTitle("Время доставки", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.layer.cornerRadius = 0.3 * buttonBounds
-        button.layer.masksToBounds = true
-        button.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
-        button.titleLabel?.font = UIFont(name: "Helvetica", size: 16)
-        button.addTarget(self, action: #selector(handlePayButton), for: .touchUpInside)
-        return button
+    var timeDeliverTextField:UITextField = {
+        let tf = UITextField()
+        tf.frame = CGRect(x: 16, y: 0, width: 375, height: 31)
+        let tfBounds:CGFloat = tf.bounds.size.height
+        tf.textAlignment = .center
+        tf.attributedPlaceholder = NSAttributedString(string:"Время доставки", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.textColor = UIColor.white
+        tf.keyboardType = .default
+        tf.layer.cornerRadius = 0.3 * tfBounds
+        tf.layer.borderWidth = 0.5
+        tf.layer.borderColor = UIColor.white.cgColor
+        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
+        return tf
     }()
     
     //    MARK: - deliveryMethod
@@ -140,35 +149,79 @@ class OrderVC: UIViewController,UITextFieldDelegate{
         return button
     }()
     
+    //    MARK: - pickerViews
     
+    //    MARK: - paymentMethodPickerView
+    var paymentMethodPickerView:UIPickerView = {
+        let view = UIPickerView()
+        return view
+    }()
+    
+    //    MARK: - deliverMethodPickerView
+    var deliverMethodPickerView:UIPickerView = {
+        let view = UIPickerView()
+        
+        return view
+    }()
+    
+    //    MARK: - timeDeliverPickerView
+    var timeDeliverPickerView:UIDatePicker = {
+        let view = UIDatePicker()
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Заказ блюда"
         
+        setupAllComponents()
+        setupAllDelegates()
+        setupAllInputViews()
+        
+    }
+    
+    func setupAllInputViews() {
+        paymentMethodTextField.inputView = paymentMethodPickerView
+        deliveryMethodTextField.inputView = deliverMethodPickerView
+        timeDeliverTextField.inputView = timeDeliverPickerView
+        
+        timeDeliverTextField.text = "\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().year)/ \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().month)/\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().day)    \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().hour):\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().minute)"
+        
+        timeDeliverPickerView.addTarget(self, action: #selector(didTappedDate), for: UIControl.Event.allEvents)
+    }
+    
+    @objc func didTappedDate(){
+        timeDeliverTextField.text = "\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().year)/ \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().month)/\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().day)    \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().hour):\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().minute)"
+    }
+    
+    func setupAllDelegates() {
+        
+        paymentMethodPickerView.delegate = self
+        deliverMethodPickerView.delegate = self
+        
         nameTextField.delegate = self
         numberTextField.delegate = self
         addressTextField.delegate = self
         commentTextField.delegate = self
-        
-        setupNameTextField()
-        setupNumberTextField()
-        setupPayMethodButton()
-        setupDeliverMethodButton()
-        setupAddressTextField()
-        setupTimeDeliverButton()
-        setupCommentTextField()
-        setupSendButton()
-        
     }
     
+    func setupAllComponents(){
+        setupNameTextField()
+        setupNumberTextField()
+        setupPayMethodTextField()
+        setupDeliverMethodTextField()
+        setupAddressTextField()
+        setupTimeDeliverTextField()
+        setupCommentTextField()
+        setupSendButton()
+    }
     func setupNameTextField(){
         
         view.addSubview(nameTextField)
         
         nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nameTextField.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor, constant: 16).isActive = true
+        nameTextField.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
         nameTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
         nameTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
     }
@@ -182,48 +235,49 @@ class OrderVC: UIViewController,UITextFieldDelegate{
         numberTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
     }
     
-    func setupPayMethodButton() {
+    func setupPayMethodTextField() {
         
-        view.addSubview(paymentMethodButton)
+        view.addSubview(paymentMethodTextField)
         
-        paymentMethodButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        paymentMethodButton.topAnchor.constraint(equalTo: numberTextField.bottomAnchor,constant:32).isActive = true
-        paymentMethodButton.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        paymentMethodButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        paymentMethodTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        paymentMethodTextField.topAnchor.constraint(equalTo: numberTextField.bottomAnchor,constant:32).isActive = true
+        paymentMethodTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
+        paymentMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
     }
     
-    func setupDeliverMethodButton(){
-        view.addSubview(deliveryMethodButton)
+    func setupDeliverMethodTextField(){
+        view.addSubview(deliveryMethodTextField)
         
-        deliveryMethodButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        deliveryMethodButton.topAnchor.constraint(equalTo: paymentMethodButton.bottomAnchor,constant:16).isActive = true
-        deliveryMethodButton.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        deliveryMethodButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        deliveryMethodTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        deliveryMethodTextField.topAnchor.constraint(equalTo: paymentMethodTextField.bottomAnchor,constant:16).isActive = true
+        deliveryMethodTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
+        deliveryMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
     }
     
     func setupAddressTextField(){
         view.addSubview(addressTextField)
         
         addressTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        addressTextField.topAnchor.constraint(equalTo: deliveryMethodButton.bottomAnchor, constant: 32).isActive = true
+        addressTextField.topAnchor.constraint(equalTo: deliveryMethodTextField.bottomAnchor, constant: 32).isActive = true
         addressTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
         addressTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
     }
     
-    func setupTimeDeliverButton() {
-        view.addSubview(timeDeliverButton)
+    func setupTimeDeliverTextField() {
+        timeDeliverPickerView.datePickerMode = .dateAndTime
+        view.addSubview(timeDeliverTextField)
         
-        timeDeliverButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        timeDeliverButton.topAnchor.constraint(equalTo: addressTextField.bottomAnchor,constant:32).isActive = true
-        timeDeliverButton.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        timeDeliverButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        timeDeliverTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        timeDeliverTextField.topAnchor.constraint(equalTo: addressTextField.bottomAnchor,constant:32).isActive = true
+        timeDeliverTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
+        timeDeliverTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
     }
     
     func setupCommentTextField() {
         view.addSubview(commentTextField)
         
         commentTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        commentTextField.topAnchor.constraint(equalTo: timeDeliverButton.bottomAnchor, constant: 32).isActive = true
+        commentTextField.topAnchor.constraint(equalTo: timeDeliverTextField.bottomAnchor, constant: 32).isActive = true
         commentTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
         commentTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
     }
@@ -232,7 +286,7 @@ class OrderVC: UIViewController,UITextFieldDelegate{
         view.addSubview(sendButton)
         
         sendButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        sendButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant:-32).isActive = true
+        sendButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant:-40).isActive = true
         sendButton.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
         sendButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/11).isActive = true
     }
@@ -245,6 +299,7 @@ class OrderVC: UIViewController,UITextFieldDelegate{
     @IBAction func dismissButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
     /*
      // MARK: - Navigation
      
@@ -254,6 +309,43 @@ class OrderVC: UIViewController,UITextFieldDelegate{
      // Pass the selected object to the new view controller.
      }
      */
+    
+}
+
+extension OrderVC:UIPickerViewDelegate,UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        var countRows:Int = paymentMethods.count
+        
+        if pickerView == paymentMethodPickerView {
+            countRows = self.deliverMethods.count
+        }
+        return countRows
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == paymentMethodPickerView {
+            let titleRow = paymentMethods[row]
+            return titleRow
+        }else if pickerView == deliverMethodPickerView{
+            let title = deliverMethods[row]
+            return title
+        }
+        return ""
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == paymentMethodPickerView {
+            self.paymentMethodTextField.text = self.paymentMethods[row]
+        }else if pickerView == deliverMethodPickerView{
+            self.deliveryMethodTextField.text = self.deliverMethods[row]
+        }
+    }
+    
     
 }
 
