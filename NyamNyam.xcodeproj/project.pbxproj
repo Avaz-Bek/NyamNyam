@@ -45,12 +45,18 @@
 		B45F8B27222A5D7F006D3D0C /* GalleryImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */; };
 		B45F8B67222A9F02006D3D0C /* CircularTransition .swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F8B66222A9F02006D3D0C /* CircularTransition .swift */; };
 		B46C5444221EB62600598CD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46C5443221EB62600598CD8 /* Default-568h@2x.png */; };
-		B476CCEB2249354500A659E8 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B476CCEA2249354500A659E8 /* OrderVC.swift */; };
+		B476CCEB2249354500A659E8 /* OrderDishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B476CCEA2249354500A659E8 /* OrderDishesVC.swift */; };
 		B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */; };
 		B4A0CCCA22267294000028A2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A0CCC922267294000028A2 /* LoginVC.swift */; };
 		B4BD366822299F9F00AF6BB4 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BD366722299F9F00AF6BB4 /* GalleryVC.swift */; };
 		B4C7FA1222477CA400848590 /* VacationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7FA1122477CA400848590 /* VacationDestination.swift */; };
-		B4CA4107223D754300BC2BC7 /* PromotionsВiscountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CA4106223D754300BC2BC7 /* PromotionsВiscountsVC.swift */; };
+		B4DA2DC0224F4A8E00A6712B /* NewsAndPromotionsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA2DBF224F4A8E00A6712B /* NewsAndPromotionsCVC.swift */; };
+		B4DA2DC4224F4ADD00A6712B /* NewsAndPromotionsVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA2DC2224F4ADD00A6712B /* NewsAndPromotionsVCCell.swift */; };
+		B4DA2DC5224F4ADD00A6712B /* NewsAndPromotionsVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DA2DC3224F4ADD00A6712B /* NewsAndPromotionsVCCell.xib */; };
+		B4DA2DC8224F508500A6712B /* FavoriteDishesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA2DC7224F508500A6712B /* FavoriteDishesCVC.swift */; };
+		B4DA2DCE224F50E500A6712B /* FavoriteDishesVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA2DCC224F50E500A6712B /* FavoriteDishesVCCell.swift */; };
+		B4DA2DCF224F50E500A6712B /* FavoriteDishesVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DA2DCD224F50E500A6712B /* FavoriteDishesVCCell.xib */; };
+		B4DA2DD3224F71A100A6712B /* ReservationСМС.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA2DD2224F71A100A6712B /* ReservationСМС.swift */; };
 		B4ED859722225C3C00BA764E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ED859622225C3C00BA764E /* Assets.xcassets */; };
 		B4F7E77B22413AB600D3F167 /* CallCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7E77A22413AB600D3F167 /* CallCVC.swift */; };
 		B4F7E77E22413AE400D3F167 /* CallCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7E77C22413AE400D3F167 /* CallCVCell.swift */; };
@@ -103,12 +109,18 @@
 		B45F8B26222A5D7F006D3D0C /* GalleryImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageVC.swift; sourceTree = "<group>"; };
 		B45F8B66222A9F02006D3D0C /* CircularTransition .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircularTransition .swift"; sourceTree = "<group>"; };
 		B46C5443221EB62600598CD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B476CCEA2249354500A659E8 /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
+		B476CCEA2249354500A659E8 /* OrderDishesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDishesVC.swift; sourceTree = "<group>"; };
 		B4988AFA221D372D00DF0178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4A0CCC922267294000028A2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B4BD366722299F9F00AF6BB4 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		B4C7FA1122477CA400848590 /* VacationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationDestination.swift; sourceTree = "<group>"; };
-		B4CA4106223D754300BC2BC7 /* PromotionsВiscountsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PromotionsВiscountsVC.swift"; sourceTree = "<group>"; };
+		B4DA2DBF224F4A8E00A6712B /* NewsAndPromotionsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndPromotionsCVC.swift; sourceTree = "<group>"; };
+		B4DA2DC2224F4ADD00A6712B /* NewsAndPromotionsVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndPromotionsVCCell.swift; sourceTree = "<group>"; };
+		B4DA2DC3224F4ADD00A6712B /* NewsAndPromotionsVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsAndPromotionsVCCell.xib; sourceTree = "<group>"; };
+		B4DA2DC7224F508500A6712B /* FavoriteDishesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDishesCVC.swift; sourceTree = "<group>"; };
+		B4DA2DCC224F50E500A6712B /* FavoriteDishesVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDishesVCCell.swift; sourceTree = "<group>"; };
+		B4DA2DCD224F50E500A6712B /* FavoriteDishesVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteDishesVCCell.xib; sourceTree = "<group>"; };
+		B4DA2DD2224F71A100A6712B /* ReservationСМС.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReservationСМС.swift"; sourceTree = "<group>"; };
 		B4ED859622225C3C00BA764E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F7E77A22413AB600D3F167 /* CallCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCVC.swift; sourceTree = "<group>"; };
 		B4F7E77C22413AE400D3F167 /* CallCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCVCell.swift; sourceTree = "<group>"; };
@@ -281,7 +293,9 @@
 		B44B1E152226585800C39B86 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B476CCE9224934BF00A659E8 /* Order */,
+				B4DA2DC6224F504600A6712B /* FavoriteDishes */,
+				B4DA2DBE224F4A3800A6712B /* NewsAndPromotions */,
+				B476CCE9224934BF00A659E8 /* Orders */,
 				B40085052244AD7A000B3DEA /* Map */,
 				B4EAC8B0223F9AAC00DFEB05 /* Menu */,
 				B4EAC8AE223F9A0300DFEB05 /* Gallery */,
@@ -289,7 +303,6 @@
 				B4EAC8B1223F9AE100DFEB05 /* Setting */,
 				B4EAC8AD223F993600DFEB05 /* Login */,
 				B4FB88E322311FE4008BF05F /* MenuDetailVC.swift */,
-				B4CA4106223D754300BC2BC7 /* PromotionsВiscountsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +310,8 @@
 		B44B1E192226597D00C39B86 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B4DA2DC9224F509300A6712B /* FavoriteDishes */,
+				B4DA2DC1224F4AB400A6712B /* NewsAndPromotions */,
 				B40085082244AE2D000B3DEA /* Map */,
 				B4EAC8B5223F9B7600DFEB05 /* Menu */,
 				B4EAC8B4223F9B5900DFEB05 /* Gallery */,
@@ -314,13 +329,14 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		B476CCE9224934BF00A659E8 /* Order */ = {
+		B476CCE9224934BF00A659E8 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
-				B476CCEA2249354500A659E8 /* OrderVC.swift */,
+				B4DA2DD1224F714900A6712B /* Reservation */,
+				B4DA2DD0224F712000A6712B /* Dishes */,
 				B446D258224CE86B0031BBED /* DataExtension.swift */,
 			);
-			path = Order;
+			path = Orders;
 			sourceTree = "<group>";
 		};
 		B4988AFC221D38B900DF0178 /* Model */ = {
@@ -367,6 +383,56 @@
 				B4C7FA1122477CA400848590 /* VacationDestination.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		B4DA2DBE224F4A3800A6712B /* NewsAndPromotions */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA2DBF224F4A8E00A6712B /* NewsAndPromotionsCVC.swift */,
+			);
+			path = NewsAndPromotions;
+			sourceTree = "<group>";
+		};
+		B4DA2DC1224F4AB400A6712B /* NewsAndPromotions */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA2DC2224F4ADD00A6712B /* NewsAndPromotionsVCCell.swift */,
+				B4DA2DC3224F4ADD00A6712B /* NewsAndPromotionsVCCell.xib */,
+			);
+			path = NewsAndPromotions;
+			sourceTree = "<group>";
+		};
+		B4DA2DC6224F504600A6712B /* FavoriteDishes */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA2DC7224F508500A6712B /* FavoriteDishesCVC.swift */,
+			);
+			path = FavoriteDishes;
+			sourceTree = "<group>";
+		};
+		B4DA2DC9224F509300A6712B /* FavoriteDishes */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA2DCC224F50E500A6712B /* FavoriteDishesVCCell.swift */,
+				B4DA2DCD224F50E500A6712B /* FavoriteDishesVCCell.xib */,
+			);
+			path = FavoriteDishes;
+			sourceTree = "<group>";
+		};
+		B4DA2DD0224F712000A6712B /* Dishes */ = {
+			isa = PBXGroup;
+			children = (
+				B476CCEA2249354500A659E8 /* OrderDishesVC.swift */,
+			);
+			path = Dishes;
+			sourceTree = "<group>";
+		};
+		B4DA2DD1224F714900A6712B /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA2DD2224F71A100A6712B /* ReservationСМС.swift */,
+			);
+			path = Reservation;
 			sourceTree = "<group>";
 		};
 		B4EAC8AC223F98DC00DFEB05 /* Helper */ = {
@@ -526,6 +592,8 @@
 			files = (
 				6EF27EC4221CFDB700F34E72 /* LaunchScreen.storyboard in Resources */,
 				B43B8867224BD5EE00532220 /* IQKeyboardManager.bundle in Resources */,
+				B4DA2DCF224F50E500A6712B /* FavoriteDishesVCCell.xib in Resources */,
+				B4DA2DC5224F4ADD00A6712B /* NewsAndPromotionsVCCell.xib in Resources */,
 				B4F7E77F22413AE400D3F167 /* CallCVCell.xib in Resources */,
 				B4988AFB221D372D00DF0178 /* GoogleService-Info.plist in Resources */,
 				B41352FB223957120060C993 /* FoodsVCCell.xib in Resources */,
@@ -629,9 +697,10 @@
 				B41352FE223961510060C993 /* FoodsVC.swift in Sources */,
 				B43B8846224BD54300532220 /* IQUITextFieldView+Additions.swift in Sources */,
 				B454DA7F222BEC4500057001 /* SettingVC.swift in Sources */,
-				B4CA4107223D754300BC2BC7 /* PromotionsВiscountsVC.swift in Sources */,
+				B4DA2DC4224F4ADD00A6712B /* NewsAndPromotionsVCCell.swift in Sources */,
 				B43B8863224BD5A500532220 /* IQPreviousNextView.swift in Sources */,
 				B4C7FA1222477CA400848590 /* VacationDestination.swift in Sources */,
+				B4DA2DC8224F508500A6712B /* FavoriteDishesCVC.swift in Sources */,
 				B4FB88EC22319C4B008BF05F /* MenuDetailCell.swift in Sources */,
 				B429F27C222E665C000033EC /* MenuCell.swift in Sources */,
 				B446D259224CE86B0031BBED /* DataExtension.swift in Sources */,
@@ -642,17 +711,20 @@
 				B4008510224539AC000B3DEA /* DetailMapVC.swift in Sources */,
 				B43B8848224BD54300532220 /* IQUIViewController+Additions.swift in Sources */,
 				B4BD366822299F9F00AF6BB4 /* GalleryVC.swift in Sources */,
+				B4DA2DC0224F4A8E00A6712B /* NewsAndPromotionsCVC.swift in Sources */,
 				B43B8860224BD5A500532220 /* IQInvocation.swift in Sources */,
+				B4DA2DD3224F71A100A6712B /* ReservationСМС.swift in Sources */,
 				6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */,
 				B43B885F224BD5A500532220 /* IQBarButtonItem.swift in Sources */,
 				B41352FA223957120060C993 /* FoodsVCCell.swift in Sources */,
 				B43B884A224BD54300532220 /* IQUIView+Hierarchy.swift in Sources */,
-				B476CCEB2249354500A659E8 /* OrderVC.swift in Sources */,
+				B476CCEB2249354500A659E8 /* OrderDishesVC.swift in Sources */,
 				B43B8853224BD57000532220 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				B43B8854224BD57000532220 /* IQKeyboardManager.swift in Sources */,
 				B417E228224B1F1B00E13D74 /* Constant.swift in Sources */,
 				B429F278222E3E26000033EC /* MenuVC.swift in Sources */,
 				B4A0CCCA22267294000028A2 /* LoginVC.swift in Sources */,
+				B4DA2DCE224F50E500A6712B /* FavoriteDishesVCCell.swift in Sources */,
 				B43B8861224BD5A500532220 /* IQTitleBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
