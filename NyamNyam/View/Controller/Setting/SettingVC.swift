@@ -33,11 +33,6 @@ class SettingVC: UITableViewController {
                 self.navigationController?.pushViewController(foodsVC, animated: true)
             }
         }else if indexPath.row == 2{
-//            if let foodsVC = self.storyboard?.instantiateViewController(withIdentifier: "ReservationCVC") as?  ReservationCVC {
-//                //self.navigationController?.pushViewController(foodsVC, animated: true)
-//                //self.present(foodsVC, animated: true, completion: nil)
-//                foodsVC.modalTransitionStyle = .flipHorizontal
-//                self.present(foodsVC, animated: true, completion: nil)
             
             guard let VC = self.storyboard?.instantiateViewController(withIdentifier: "ReservationCVC") else { return }
             let reservationCVC = UINavigationController(rootViewController: VC)

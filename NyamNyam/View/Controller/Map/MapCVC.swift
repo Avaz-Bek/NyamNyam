@@ -22,9 +22,6 @@ class MapCVC: UICollectionViewController {
         collectionView.register(MapVCCell.nib, forCellWithReuseIdentifier: MapVCCell.identifier)
     }
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
-    }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
     }
@@ -43,13 +40,10 @@ class MapCVC: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        if UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailMapVC") is DetailMapVC {
-            self.performSegue(withIdentifier: "detailMapVC", sender: nil)
+        if let detailMapVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailMapVC") as?  DetailMapVC {
+            detailMapVC.largeTitle = array[indexPath.row]
+            self.navigationController?.pushViewController(detailMapVC, animated: true)
         }
-        
-        
     }
 }
 

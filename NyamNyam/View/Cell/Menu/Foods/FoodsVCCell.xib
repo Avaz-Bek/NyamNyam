@@ -46,8 +46,8 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xyO-Gc-PK8">
-                        <rect key="frame" x="136" y="25" width="77.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="136" y="23.5" width="97.5" height="23.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -65,12 +65,6 @@
                             <action selector="favouriteButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Gvl-2j-rsL"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d9V-mC-ftW">
-                        <rect key="frame" x="136" y="103" width="30.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3X3-2r-hWW">
                         <rect key="frame" x="132" y="55" width="227" height="30"/>
                         <subviews>
@@ -85,7 +79,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvC-TH-Udc">
                                 <rect key="frame" x="75.5" y="0.0" width="76" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.98823529409999999" green="0.36078431370000003" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -101,6 +95,12 @@
                             </button>
                         </subviews>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d9V-mC-ftW">
+                        <rect key="frame" x="135" y="102.5" width="110" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,13 +114,13 @@
                 <constraint firstItem="3X3-2r-hWW" firstAttribute="leading" secondItem="4Dd-Zi-Oyd" secondAttribute="trailing" constant="16" id="V4C-Id-gjg"/>
                 <constraint firstAttribute="trailing" secondItem="3X3-2r-hWW" secondAttribute="trailing" constant="16" id="WL6-M3-pw8"/>
                 <constraint firstItem="jG2-jA-Z9m" firstAttribute="centerY" secondItem="d9V-mC-ftW" secondAttribute="centerY" id="fba-sR-HJg"/>
-                <constraint firstItem="d9V-mC-ftW" firstAttribute="leading" secondItem="xyO-Gc-PK8" secondAttribute="leading" id="gt6-ne-8aj"/>
+                <constraint firstItem="d9V-mC-ftW" firstAttribute="leading" secondItem="xyO-Gc-PK8" secondAttribute="leading" constant="-1" id="gt6-ne-8aj"/>
                 <constraint firstItem="4Dd-Zi-Oyd" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="iMW-KX-TOH"/>
                 <constraint firstItem="4Dd-Zi-Oyd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="lHd-op-MMk"/>
                 <constraint firstItem="eR3-PX-Az3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xyO-Gc-PK8" secondAttribute="trailing" constant="16" id="loT-fW-SPf"/>
                 <constraint firstItem="jG2-jA-Z9m" firstAttribute="bottom" secondItem="4Dd-Zi-Oyd" secondAttribute="bottom" constant="8" id="mLJ-kd-NPj"/>
                 <constraint firstItem="xyO-Gc-PK8" firstAttribute="leading" secondItem="4Dd-Zi-Oyd" secondAttribute="trailing" constant="20" id="ppf-QK-R5j"/>
-                <constraint firstItem="jG2-jA-Z9m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d9V-mC-ftW" secondAttribute="trailing" constant="8" id="sEP-ZF-qcw"/>
+                <constraint firstItem="jG2-jA-Z9m" firstAttribute="leading" secondItem="d9V-mC-ftW" secondAttribute="trailing" constant="4" id="sEP-ZF-qcw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="239" height="50"/>
@@ -134,7 +134,7 @@
                 <outlet property="tripperLabel" destination="KvC-TH-Udc" id="0ez-8k-TzC"/>
                 <outlet property="weightLabel" destination="d9V-mC-ftW" id="ddP-Rl-zJO"/>
             </connections>
-            <point key="canvasLocation" x="-78" y="80"/>
+            <point key="canvasLocation" x="-79.200000000000003" y="79.160419790104953"/>
         </collectionViewCell>
     </objects>
     <resources>

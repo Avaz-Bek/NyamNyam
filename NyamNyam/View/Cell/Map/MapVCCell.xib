@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,25 +20,28 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ням Ням" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-4L-lv6">
-                        <rect key="frame" x="80" y="8" width="75" height="21"/>
+                        <rect key="frame" x="96" y="8" width="75" height="21"/>
                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="г. Бишкек" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5W-Wo-bJn">
-                        <rect key="frame" x="80" y="42" width="51.5" height="13"/>
+                        <rect key="frame" x="96" y="42" width="52" height="13"/>
                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="улица Масалиева 17к" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIx-gB-7Sl">
-                        <rect key="frame" x="80" y="58" width="124" height="14"/>
+                        <rect key="frame" x="96" y="58" width="124" height="14"/>
                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-icon" translatesAutoresizingMaskIntoConstraints="NO" id="lbG-oA-IRI">
-                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-icon" translatesAutoresizingMaskIntoConstraints="NO" id="7yG-Ta-8sU">
+                        <rect key="frame" x="16" y="16" width="64" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="VmJ-eW-Wow"/>
+                        </constraints>
                     </imageView>
                 </subviews>
             </view>
@@ -49,22 +52,22 @@
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d5W-Wo-bJn" secondAttribute="trailing" constant="16" id="A3k-9K-WJX"/>
                 <constraint firstItem="d5W-Wo-bJn" firstAttribute="top" secondItem="1eU-4L-lv6" secondAttribute="bottom" constant="13" id="GXD-Sx-eHW"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iIx-gB-7Sl" secondAttribute="trailing" constant="16" id="KKg-hX-x8k"/>
-                <constraint firstItem="lbG-oA-IRI" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="16" id="LnD-uU-Dyg"/>
                 <constraint firstItem="d5W-Wo-bJn" firstAttribute="leading" secondItem="1eU-4L-lv6" secondAttribute="leading" id="PhL-qZ-pZx"/>
-                <constraint firstItem="lbG-oA-IRI" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="16" id="bJZ-jW-dfS"/>
-                <constraint firstItem="1eU-4L-lv6" firstAttribute="leading" secondItem="lbG-oA-IRI" secondAttribute="trailing" constant="24" id="h8v-RA-Gjx"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="lbG-oA-IRI" secondAttribute="trailing" constant="319" id="htd-7d-esg"/>
+                <constraint firstItem="7yG-Ta-8sU" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Wm9-Lj-Wnl"/>
+                <constraint firstItem="7yG-Ta-8sU" firstAttribute="top" secondItem="1eU-4L-lv6" secondAttribute="top" constant="8" id="iLp-yl-czF"/>
+                <constraint firstItem="7yG-Ta-8sU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="qpD-Pd-fnt"/>
                 <constraint firstItem="iIx-gB-7Sl" firstAttribute="top" secondItem="d5W-Wo-bJn" secondAttribute="bottom" constant="3" id="uZF-T6-X4L"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="lbG-oA-IRI" secondAttribute="bottom" constant="24" id="xyy-Hw-w4z"/>
+                <constraint firstItem="1eU-4L-lv6" firstAttribute="leading" secondItem="7yG-Ta-8sU" secondAttribute="trailing" constant="16" id="whF-cj-09v"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1eU-4L-lv6" secondAttribute="trailing" constant="24" id="zep-Er-G1v"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="city" destination="d5W-Wo-bJn" id="vgl-5G-3Am"/>
+                <outlet property="mapIcon" destination="7yG-Ta-8sU" id="nwb-9Z-XKj"/>
                 <outlet property="nameOfRestourant" destination="1eU-4L-lv6" id="sh5-pH-hzA"/>
                 <outlet property="street" destination="iIx-gB-7Sl" id="HSC-a4-qEJ"/>
             </connections>
-            <point key="canvasLocation" x="136.80000000000001" y="153.82308845577214"/>
+            <point key="canvasLocation" x="24.800000000000001" y="153.82308845577214"/>
         </collectionViewCell>
     </objects>
     <resources>

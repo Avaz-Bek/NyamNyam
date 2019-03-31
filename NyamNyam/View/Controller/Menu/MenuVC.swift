@@ -18,8 +18,12 @@ class MenuVC: UIViewController{
     
     
     // MARK: - Properties
-    let mainFoodsName:[[String]]  = [   ["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"]
+    let foodsName:[[String]]  = [   ["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"]
     ]
+    
+    let mainFoodsName:[String]  = ["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"]
+    
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -52,20 +56,20 @@ class MenuVC: UIViewController{
     }
     
     
-//      MARK: - Navigation
+    //      MARK: - Navigation
     
-//      In a storyboard-based application, you will often want to do a little preparation before navigation
-//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "FoodsVC" {
-//
-//        if let indexPath = self.myCollectionView.indexPathsForSelectedItems{
-//            let foodsVC = segue.destination as! FoodsVC
-//                foodsVC.imageNameArray = self.mainFoodsName[indexPath]
-//
-//            }
-//        }
-//     }
+    //      In a storyboard-based application, you will often want to do a little preparation before navigation
+    //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //
+    //        if segue.identifier == "FoodsVC" {
+    //
+    //        if let indexPath = self.myCollectionView.indexPathsForSelectedItems{
+    //            let foodsVC = segue.destination as! FoodsVC
+    //                foodsVC.imageNameArray = self.mainFoodsName[indexPath]
+    //
+    //            }
+    //        }
+    //     }
     
     
 }
@@ -74,13 +78,11 @@ class MenuVC: UIViewController{
 // MARK: - Data source
 extension MenuVC:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mainFoodsName.count
+        return foodsName.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MenuCell
-        
-        
         
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius  = 10
@@ -88,7 +90,7 @@ extension MenuVC:UICollectionViewDelegate,UICollectionViewDataSource{
         cell.menuItemImage.layer.masksToBounds = true
         cell.menuItemImage.layer.cornerRadius = 10
         cell.menuItemImage.translatesAutoresizingMaskIntoConstraints  = false
-        cell.menuItemImage.contentMode = .scaleAspectFill
+        cell.menuItemImage.contentMode = .scaleAspectFit
         //cell.menuItemImage.image = UIImage(named: mainFoodsName[indexPath.row][indexPath.row] )
         
         //cell.menuItemName.text = mainFoodsName[indexPath.row][indexPath.row]
@@ -100,10 +102,8 @@ extension MenuVC:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if let foodsVC = self.storyboard?.instantiateViewController(withIdentifier: "FoodsVC") as?  FoodsVC {
-            foodsVC.imageNameArray = self.mainFoodsName[indexPath.row]
-            
-            print(mainFoodsName[indexPath.row])
-            print(foodsVC.imageNameArray)
+            foodsVC.imageNameArray = self.foodsName[indexPath.row]
+            foodsVC.largeTitle = self.mainFoodsName[indexPath.row]
             
             self.navigationController?.pushViewController(foodsVC, animated: true)
         }

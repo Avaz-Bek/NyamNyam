@@ -13,6 +13,7 @@ class MapVCCell: UICollectionViewCell {
     
     
     
+    @IBOutlet weak var mapIcon: UIImageView!
     @IBOutlet weak var nameOfRestourant: UILabel!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var street: UILabel!

@@ -12,7 +12,7 @@ import UIKit
 class FoodsVC: UICollectionViewController {
     
     
-    
+    var largeTitle:String?
     let searchController = UISearchController(searchResultsController: nil)
     var imageNameArray:[String] = []
     
@@ -21,6 +21,8 @@ class FoodsVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = largeTitle
         
         navigationController?.navigationBar.prefersLargeTitles = true
         searchController.searchBar.delegate = self
@@ -135,40 +137,42 @@ extension FoodsVC: FoodsDelegate{
     
     func didTapOrderButton(_ sender: FoodsVCCell, _ btn: UIButton) {
         
-                btn.orderButtonEffect(sender: btn)
+        btn.orderButtonEffect(sender: btn)
         
-                let alert = UIAlertController(title: "Хотите заказать?", message: "Нажав на кнопку Заказать, вы попадёте на страницу для заполнения обязательных полей", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Хотите заказать?", message: "Нажав на кнопку Заказать, вы попадёте на страницу для заполнения обязательных полей", preferredStyle: UIAlertController.Style.alert)
         
-                alert.addAction(UIAlertAction(title: "Отложить", style: UIAlertAction.Style.cancel, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
-                   
-                }))
+        alert.addAction(UIAlertAction(title: "Отложить", style: UIAlertAction.Style.cancel, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            
+        }))
         
-                alert.addAction(UIAlertAction(title: "Заказать", style: UIAlertAction.Style.default, handler: { (action) in
-
-                }))
+        alert.addAction(UIAlertAction(title: "Заказать", style: UIAlertAction.Style.default, handler: { (action) in
+            guard let VC = self.storyboard?.instantiateViewController(withIdentifier: "OrderVC") else { return }
+            let reservationCVC = UINavigationController(rootViewController: VC)
+            self.navigationController?.present(reservationCVC, animated: true, completion: nil)
+        }))
         
-                self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     
-//    func didTapOrderButton(_ sender: FoodsVCCell, _ btn: UIButton) {
-//        print("BB")
-//        btn.orderButtonEffect(sender: btn)
-//
-//        let alert = UIAlertController(title: "Хотите ли вы заказать?", message: "Нажав на кнопку Заказать, вы попадёте на страницу для заполнения обязательных полей", preferredStyle: UIAlertController.Style.alert)
-//
-//        alert.addAction(UIAlertAction(title: "", style: UIAlertAction.Style.cancel, handler: { (action) in
-//            alert.dismiss(animated: true, completion: nil)
-//            print("Отложить на потом")
-//        }))
-//
-//        alert.addAction(UIAlertAction(title: "Заказать", style: UIAlertAction.Style.default, handler: { (action) in
-//            print("Заказать")
-//        }))
-//
-//        self.present(alert, animated: true, completion: nil)
-//    }
+    //    func didTapOrderButton(_ sender: FoodsVCCell, _ btn: UIButton) {
+    //        print("BB")
+    //        btn.orderButtonEffect(sender: btn)
+    //
+    //        let alert = UIAlertController(title: "Хотите ли вы заказать?", message: "Нажав на кнопку Заказать, вы попадёте на страницу для заполнения обязательных полей", preferredStyle: UIAlertController.Style.alert)
+    //
+    //        alert.addAction(UIAlertAction(title: "", style: UIAlertAction.Style.cancel, handler: { (action) in
+    //            alert.dismiss(animated: true, completion: nil)
+    //            print("Отложить на потом")
+    //        }))
+    //
+    //        alert.addAction(UIAlertAction(title: "Заказать", style: UIAlertAction.Style.default, handler: { (action) in
+    //            print("Заказать")
+    //        }))
+    //
+    //        self.present(alert, animated: true, completion: nil)
+    //    }
     
     
 }

@@ -27,17 +27,17 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J7n-cM-seg">
-                        <rect key="frame" x="132" y="21" width="227" height="20.5"/>
+                        <rect key="frame" x="132" y="21" width="227" height="26.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="227" id="fpJ-E7-nRH"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6yR-pu-nRI">
-                        <rect key="frame" x="136" y="102" width="30.5" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="136" y="103.5" width="110" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -52,7 +52,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4H-rE-cer">
                                 <rect key="frame" x="75.5" y="0.0" width="76" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.98823529409999999" green="0.36078431370000003" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -93,10 +93,10 @@
                 <constraint firstItem="NLt-g7-XgD" firstAttribute="trailing" secondItem="7d7-mV-dCx" secondAttribute="trailing" id="Kxc-ci-zXA"/>
                 <constraint firstItem="NLt-g7-XgD" firstAttribute="centerY" secondItem="6yR-pu-nRI" secondAttribute="centerY" id="P6Q-6l-B79"/>
                 <constraint firstItem="J7n-cM-seg" firstAttribute="leading" secondItem="tiU-40-dmh" secondAttribute="trailing" constant="16" id="eDd-LH-ued"/>
+                <constraint firstItem="NLt-g7-XgD" firstAttribute="leading" secondItem="6yR-pu-nRI" secondAttribute="trailing" constant="3" id="fy0-yO-aqV"/>
                 <constraint firstItem="tiU-40-dmh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="21" id="i51-DE-3KG"/>
                 <constraint firstItem="J7n-cM-seg" firstAttribute="top" secondItem="tiU-40-dmh" secondAttribute="top" id="iQ2-Dm-KL3"/>
                 <constraint firstItem="6yR-pu-nRI" firstAttribute="leading" secondItem="J7n-cM-seg" secondAttribute="leading" constant="4" id="iij-fx-R49"/>
-                <constraint firstItem="6yR-pu-nRI" firstAttribute="top" secondItem="7d7-mV-dCx" secondAttribute="bottom" constant="16" id="s0q-5d-cif"/>
                 <constraint firstItem="7d7-mV-dCx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J7n-cM-seg" secondAttribute="bottom" constant="8" id="yuF-pQ-kAI"/>
                 <constraint firstItem="tiU-40-dmh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="z6z-KI-FZC"/>
             </constraints>

@@ -12,6 +12,7 @@ import GooglePlaces
 
 class DetailMapVC: UIViewController,CLLocationManagerDelegate{
     
+    var largeTitle:String?
     private let locationManager = CLLocationManager()
     //private var currentCoordinate: CLLocationCoordinate2D?
     var mapView:GMSMapView?
@@ -20,7 +21,7 @@ class DetailMapVC: UIViewController,CLLocationManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = largeTitle
         mapView = GMSMapView()
         
         let searchButton: UIButton = UIButton(type: UIButton.ButtonType.custom)

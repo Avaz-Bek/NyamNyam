@@ -13,8 +13,8 @@ class ReservationCVC: UIViewController,UITextFieldDelegate{
     
     //    MARK: - properties
     
-    var paymentMethods = ["Наличными","Безналичный"]
-    var deliverMethods = ["Курьерская доставка","Самовывоз"]
+    var countOfPeople = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"]
+    var addressOfRestourants = ["Bishkek","Osh","Naryn","Talas","Chuy","Issyk Kul","Djalal Abad"]
     
     //    MARK: - nametextfield
     var nameTextField:UITextField = {
@@ -50,19 +50,53 @@ class ReservationCVC: UIViewController,UITextFieldDelegate{
     }()
     
     //    MARK: - addrestextfiled
-    var addressTextField:UITextField = {
+    var countOfPeopleTextField:UITextField = {
         let tf = UITextField()
         tf.textAlignment = .center
         tf.frame = CGRect(x: 16, y: 0, width: 375, height: 31)
         let tfBounds:CGFloat = tf.bounds.size.height
         tf.textAlignment = .center
-        tf.attributedPlaceholder = NSAttributedString(string:"Ваш адрес", attributes:[NSAttributedString.Key.foregroundColor: UIColor.black,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
+        tf.attributedPlaceholder = NSAttributedString(string:"Количество людей", attributes:[NSAttributedString.Key.foregroundColor: UIColor.black,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.keyboardType = .default
         tf.layer.cornerRadius = 0.3 * tfBounds
         tf.layer.borderWidth = 0.5
         tf.layer.borderColor = UIColor.white.cgColor
         tf.backgroundColor = UIColor.white
+        return tf
+    }()
+    
+    //    MARK: - dataTextField
+    var dataTextField:UITextField = {
+        let tf = UITextField()
+        tf.frame = CGRect(x: 0, y: 0, width: 375, height: 31)
+        let tfBounds:CGFloat = tf.bounds.size.height
+        tf.textAlignment = .center
+        tf.attributedPlaceholder = NSAttributedString(string:"Дата", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.keyboardType = .default
+        tf.textColor = UIColor.white
+        tf.layer.cornerRadius = 0.3 * tfBounds
+        tf.layer.borderWidth = 0.5
+        tf.layer.borderColor = UIColor.white.cgColor
+        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
+        return tf
+    }()
+
+    
+    //    MARK: - timeTextField
+    var timeTextField:UITextField = {
+        let tf = UITextField()
+        tf.frame = CGRect(x: 150, y: 0, width: 375, height: 31)
+        let tfBounds:CGFloat = tf.bounds.size.height
+        tf.textAlignment = .center
+        tf.attributedPlaceholder = NSAttributedString(string:"Время", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.textColor = UIColor.white
+        tf.keyboardType = .default
+        tf.layer.cornerRadius = 0.3 * tfBounds
+        tf.layer.borderWidth = 0.5
+        tf.layer.borderColor = UIColor.white.cgColor
+        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
         return tf
     }()
     
@@ -82,62 +116,27 @@ class ReservationCVC: UIViewController,UITextFieldDelegate{
         return tf
     }()
     
-    //    MARK: - paymentMethod
-    var paymentMethodTextField:UITextField = {
+    //    MARK: - addresOfRestourant
+    var addresTextField:UITextField = {
         let tf = UITextField()
         tf.frame = CGRect(x: 16, y: 0, width: 375, height: 31)
         let tfBounds:CGFloat = tf.bounds.size.height
         tf.textAlignment = .center
-        tf.attributedPlaceholder = NSAttributedString(string:"Способ оплаты", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
+        tf.attributedPlaceholder = NSAttributedString(string:"Выберите адрес ресторана", attributes:[NSAttributedString.Key.foregroundColor: UIColor.black,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.keyboardType = .default
-        tf.textColor = UIColor.white
-        tf.layer.cornerRadius = 0.3 * tfBounds
-        tf.layer.borderWidth = 0.5
-        tf.layer.borderColor = UIColor.white.cgColor
-        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
-        return tf
-    }()
-    
-    //    MARK: - deliveryMethod
-    var deliveryMethodTextField:UITextField = {
-        let tf = UITextField()
-        tf.frame = CGRect(x: 16, y: 0, width: 375, height: 31)
-        let tfBounds:CGFloat = tf.bounds.size.height
-        tf.textAlignment = .center
-        tf.attributedPlaceholder = NSAttributedString(string:"Способ доставки", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.keyboardType = .default
-        tf.textColor = UIColor.white
-        tf.layer.cornerRadius = 0.3 * tfBounds
-        tf.layer.borderWidth = 0.5
-        tf.layer.borderColor = UIColor.white.cgColor
-        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
-        return tf
-    }()
-    
-    //    MARK: - deliveryMethod
-    var timeDeliverTextField:UITextField = {
-        let tf = UITextField()
-        tf.frame = CGRect(x: 16, y: 0, width: 375, height: 31)
-        let tfBounds:CGFloat = tf.bounds.size.height
-        tf.textAlignment = .center
-        tf.attributedPlaceholder = NSAttributedString(string:"Время доставки", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Georgia", size: 12)!])
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.textColor = UIColor.white
         tf.keyboardType = .default
         tf.layer.cornerRadius = 0.3 * tfBounds
         tf.layer.borderWidth = 0.5
         tf.layer.borderColor = UIColor.white.cgColor
-        tf.backgroundColor = UIColor(red: 253/255, green: 92/255, blue: 1/255, alpha: 0.8)
+        tf.backgroundColor = UIColor.white
         return tf
     }()
     
     //    MARK: - deliveryMethod
     var sendButton:UIButton = {
         let button = UIButton()
-        button.frame = CGRect(x: 16, y: 0, width: 375, height: 30)
-        let buttonBounds:CGFloat = button.bounds.size.height
+        button.frame = CGRect(x: 16, y: 0, width: 375, height: 48)
+        let buttonBounds:CGFloat = button.bounds.size.width/6
         button.setTitle("Отправить", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
@@ -151,29 +150,34 @@ class ReservationCVC: UIViewController,UITextFieldDelegate{
     
     //    MARK: - pickerViews
     
-    //    MARK: - paymentMethodPickerView
-    var paymentMethodPickerView:UIPickerView = {
-        let view = UIPickerView()
-        return view
-    }()
-    
     //    MARK: - deliverMethodPickerView
-    var deliverMethodPickerView:UIPickerView = {
+    var countOfPeoplePickerView:UIPickerView = {
         let view = UIPickerView()
         
         return view
     }()
+    //    MARK: - paymentMethodPickerView
+    var dataPickerView:UIDatePicker = {
+        let view = UIDatePicker()
+        return view
+    }()
     
     //    MARK: - timeDeliverPickerView
-    var timeDeliverPickerView:UIDatePicker = {
+    var timePickerView:UIDatePicker = {
         let view = UIDatePicker()
+        return view
+    }()
+    
+    //    MARK: - timeDeliverPickerView
+    var addressPickerView:UIPickerView = {
+        let view = UIPickerView()
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Заказ блюда"
+        self.navigationItem.title = "Заказ столика"
         
         setupAllComponents()
         setupAllDelegates()
@@ -182,113 +186,121 @@ class ReservationCVC: UIViewController,UITextFieldDelegate{
     }
     
     func setupAllInputViews() {
-        paymentMethodTextField.inputView = paymentMethodPickerView
-        deliveryMethodTextField.inputView = deliverMethodPickerView
-        timeDeliverTextField.inputView = timeDeliverPickerView
         
-        timeDeliverTextField.text = "\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().year)/ \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().month)/\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().day)    \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().hour):\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().minute)"
+        countOfPeopleTextField.inputView = countOfPeoplePickerView
+        dataTextField.inputView = dataPickerView
+        timeTextField.inputView = timePickerView
+        addresTextField.inputView = addressPickerView
         
-        timeDeliverPickerView.addTarget(self, action: #selector(didTappedDate), for: UIControl.Event.allEvents)
+        dataPickerView.addTarget(self, action: #selector(didTappedDate), for: UIControl.Event.allEvents)
+        timePickerView.addTarget(self, action: #selector(didTappedTime), for: UIControl.Event.allEvents)
     }
     
     @objc func didTappedDate(){
-        timeDeliverTextField.text = "\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().year)/ \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().month)/\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().day)    \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().hour):\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().minute)"
+        dataTextField.text = "\(dataPickerView.date.getDayMonthYearHourMinuteSecond().month)/\(dataPickerView.date.getDayMonthYearHourMinuteSecond().day)/\(dataPickerView.date.getDayMonthYearHourMinuteSecond().year)"
+    }
+    @objc func didTappedTime(){
+        timeTextField.text = "\(timePickerView.date.getDayMonthYearHourMinuteSecond().hour):\(timePickerView.date.getDayMonthYearHourMinuteSecond().minute)"
     }
     
     func setupAllDelegates() {
         
-        paymentMethodPickerView.delegate = self
-        deliverMethodPickerView.delegate = self
+        countOfPeoplePickerView.delegate = self
+        addressPickerView.delegate = self
         
         nameTextField.delegate = self
         numberTextField.delegate = self
-        addressTextField.delegate = self
+        countOfPeopleTextField.delegate = self
         commentTextField.delegate = self
+        addresTextField.delegate = self
     }
     
     func setupAllComponents(){
         setupNameTextField()
         setupNumberTextField()
-        setupPayMethodTextField()
-        setupDeliverMethodTextField()
-        setupAddressTextField()
-        setupTimeDeliverTextField()
+        setupCountOfPepleTextField()
+        setupDataTextField()
+        setupTimeTextField()
         setupCommentTextField()
+        setupAddressTextField()
         setupSendButton()
     }
     func setupNameTextField(){
-        
         view.addSubview(nameTextField)
         
         nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nameTextField.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
+        nameTextField.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor, constant: view.frame.height/13).isActive = true
         nameTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        nameTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        nameTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func  setupNumberTextField() {
         view.addSubview(numberTextField)
         
         numberTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        numberTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 16).isActive = true
+        numberTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: view.frame.height/25).isActive = true
         numberTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        numberTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        numberTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
-    func setupPayMethodTextField() {
+    
+    func setupCountOfPepleTextField(){
+        view.addSubview(countOfPeopleTextField)
         
-        view.addSubview(paymentMethodTextField)
-        
-        paymentMethodTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        paymentMethodTextField.topAnchor.constraint(equalTo: numberTextField.bottomAnchor,constant:32).isActive = true
-        paymentMethodTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        paymentMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        countOfPeopleTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        countOfPeopleTextField.topAnchor.constraint(equalTo: numberTextField.bottomAnchor, constant: view.frame.height/25).isActive = true
+        countOfPeopleTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
+        countOfPeopleTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
-    func setupDeliverMethodTextField(){
-        view.addSubview(deliveryMethodTextField)
+    func setupDataTextField() {
+        dataPickerView.datePickerMode = .date
+        view.addSubview(dataTextField)
         
-        deliveryMethodTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        deliveryMethodTextField.topAnchor.constraint(equalTo: paymentMethodTextField.bottomAnchor,constant:16).isActive = true
-        deliveryMethodTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        deliveryMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        dataTextField.leftAnchor.constraint(equalTo: countOfPeopleTextField.leftAnchor,constant: 16).isActive = true
+        //dataTextField.rightAnchor.constraint(equalTo: timeTextField.leftAnchor, constant: 32)
+        //dataTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        dataTextField.topAnchor.constraint(equalTo: countOfPeopleTextField.bottomAnchor,constant:view.frame.height/20).isActive = true
+        dataTextField.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -view.frame.width/2 - 48).isActive = true
+        dataTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
-    func setupAddressTextField(){
-        view.addSubview(addressTextField)
+    func setupTimeTextField() {
+        timePickerView.datePickerMode = .time
+        view.addSubview(timeTextField)
         
-        addressTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        addressTextField.topAnchor.constraint(equalTo: deliveryMethodTextField.bottomAnchor, constant: 32).isActive = true
-        addressTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        addressTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
-    }
-    
-    func setupTimeDeliverTextField() {
-        timeDeliverPickerView.datePickerMode = .dateAndTime
-        view.addSubview(timeDeliverTextField)
-        
-        timeDeliverTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        timeDeliverTextField.topAnchor.constraint(equalTo: addressTextField.bottomAnchor,constant:32).isActive = true
-        timeDeliverTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        timeDeliverTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        timeTextField.leftAnchor.constraint(equalTo: dataTextField.rightAnchor,constant: 32).isActive = true
+        timeTextField.rightAnchor.constraint(equalTo: countOfPeopleTextField.rightAnchor,constant: -16  )
+        timeTextField.topAnchor.constraint(equalTo: dataTextField.topAnchor).isActive = true
+        timeTextField.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -view.frame.width/2 - 48).isActive = true
+        timeTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupCommentTextField() {
         view.addSubview(commentTextField)
         
         commentTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        commentTextField.topAnchor.constraint(equalTo: timeDeliverTextField.bottomAnchor, constant: 32).isActive = true
+        commentTextField.topAnchor.constraint(equalTo: timeTextField.bottomAnchor, constant: view.frame.height/20).isActive = true
         commentTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        commentTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        commentTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
+    }
+    
+    func setupAddressTextField(){
+        view.addSubview(addresTextField)
+        
+        addresTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        addresTextField.topAnchor.constraint(equalTo: commentTextField.bottomAnchor,constant:view.frame.height/25).isActive = true
+        addresTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
+        addresTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupSendButton() {
         view.addSubview(sendButton)
         
         sendButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        sendButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant:-40).isActive = true
+        sendButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant:-(view.frame.height/10)).isActive = true
         sendButton.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        sendButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/11).isActive = true
+        sendButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/9).isActive = true
     }
     
     @objc func handlePayButton(sender:UIButton){
@@ -319,30 +331,30 @@ extension ReservationCVC:UIPickerViewDelegate,UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        var countRows:Int = paymentMethods.count
+        var countRows:Int = countOfPeople.count
         
-        if pickerView == paymentMethodPickerView {
-            countRows = self.deliverMethods.count
+        if pickerView == addressPickerView {
+            countRows = self.addressOfRestourants.count
         }
         return countRows
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == paymentMethodPickerView {
-            let titleRow = paymentMethods[row]
+        if pickerView == countOfPeoplePickerView {
+            let titleRow = countOfPeople[row]
             return titleRow
-        }else if pickerView == deliverMethodPickerView{
-            let title = deliverMethods[row]
+        }else if pickerView == addressPickerView {
+            let title = addressOfRestourants[row]
             return title
         }
         return ""
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == paymentMethodPickerView {
-            self.paymentMethodTextField.text = self.paymentMethods[row]
-        }else if pickerView == deliverMethodPickerView{
-            self.deliveryMethodTextField.text = self.deliverMethods[row]
+        if pickerView == countOfPeoplePickerView {
+            self.countOfPeopleTextField.text = self.countOfPeople[row]
+        }else if pickerView == addressPickerView{
+            self.addresTextField.text = self.addressOfRestourants[row]
         }
     }
     

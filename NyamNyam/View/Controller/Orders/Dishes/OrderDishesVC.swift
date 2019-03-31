@@ -137,7 +137,7 @@ class OrderVC: UIViewController,UITextFieldDelegate{
     var sendButton:UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 16, y: 0, width: 375, height: 30)
-        let buttonBounds:CGFloat = button.bounds.size.height
+        let buttonBounds:CGFloat = button.bounds.size.width/6
         button.setTitle("Отправить", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
@@ -192,7 +192,7 @@ class OrderVC: UIViewController,UITextFieldDelegate{
     }
     
     @objc func didTappedDate(){
-        timeDeliverTextField.text = "\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().year)/ \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().month)/\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().day)    \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().hour):\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().minute)"
+        timeDeliverTextField.text = "\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().month)/ \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().day)/\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().year)    \(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().hour):\(timeDeliverPickerView.date.getDayMonthYearHourMinuteSecond().minute)"
     }
     
     func setupAllDelegates() {
@@ -221,18 +221,18 @@ class OrderVC: UIViewController,UITextFieldDelegate{
         view.addSubview(nameTextField)
         
         nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nameTextField.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
+        nameTextField.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor, constant: view.frame.height/25).isActive = true
         nameTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        nameTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        nameTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func  setupNumberTextField() {
         view.addSubview(numberTextField)
         
         numberTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        numberTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 16).isActive = true
+        numberTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: view.frame.height/45).isActive = true
         numberTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        numberTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        numberTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupPayMethodTextField() {
@@ -240,27 +240,27 @@ class OrderVC: UIViewController,UITextFieldDelegate{
         view.addSubview(paymentMethodTextField)
         
         paymentMethodTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        paymentMethodTextField.topAnchor.constraint(equalTo: numberTextField.bottomAnchor,constant:32).isActive = true
+        paymentMethodTextField.topAnchor.constraint(equalTo: numberTextField.bottomAnchor,constant:view.frame.height/25).isActive = true
         paymentMethodTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        paymentMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        paymentMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupDeliverMethodTextField(){
         view.addSubview(deliveryMethodTextField)
         
         deliveryMethodTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        deliveryMethodTextField.topAnchor.constraint(equalTo: paymentMethodTextField.bottomAnchor,constant:16).isActive = true
+        deliveryMethodTextField.topAnchor.constraint(equalTo: paymentMethodTextField.bottomAnchor,constant:view.frame.height/45).isActive = true
         deliveryMethodTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        deliveryMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        deliveryMethodTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupAddressTextField(){
         view.addSubview(addressTextField)
         
         addressTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        addressTextField.topAnchor.constraint(equalTo: deliveryMethodTextField.bottomAnchor, constant: 32).isActive = true
+        addressTextField.topAnchor.constraint(equalTo: deliveryMethodTextField.bottomAnchor, constant: view.frame.height/25).isActive = true
         addressTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        addressTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        addressTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupTimeDeliverTextField() {
@@ -268,27 +268,27 @@ class OrderVC: UIViewController,UITextFieldDelegate{
         view.addSubview(timeDeliverTextField)
         
         timeDeliverTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        timeDeliverTextField.topAnchor.constraint(equalTo: addressTextField.bottomAnchor,constant:32).isActive = true
+        timeDeliverTextField.topAnchor.constraint(equalTo: addressTextField.bottomAnchor,constant:view.frame.height/25).isActive = true
         timeDeliverTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        timeDeliverTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        timeDeliverTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupCommentTextField() {
         view.addSubview(commentTextField)
         
         commentTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        commentTextField.topAnchor.constraint(equalTo: timeDeliverTextField.bottomAnchor, constant: 32).isActive = true
+        commentTextField.topAnchor.constraint(equalTo: timeDeliverTextField.bottomAnchor, constant: view.frame.height/25).isActive = true
         commentTextField.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -32).isActive = true
-        commentTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/12).isActive = true
+        commentTextField.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/10).isActive = true
     }
     
     func setupSendButton() {
         view.addSubview(sendButton)
         
         sendButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        sendButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant:-40).isActive = true
+        sendButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant:-(view.frame.height/12)).isActive = true
         sendButton.widthAnchor.constraint(equalTo: view.widthAnchor,constant: -64).isActive = true
-        sendButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/11).isActive = true
+        sendButton.heightAnchor.constraint(equalTo: view.widthAnchor,multiplier: 1/9).isActive = true
     }
     
     @objc func handlePayButton(sender:UIButton){
