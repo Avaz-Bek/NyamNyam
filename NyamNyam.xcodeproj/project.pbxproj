@@ -22,6 +22,11 @@
 		B417E228224B1F1B00E13D74 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417E227224B1F1B00E13D74 /* Constant.swift */; };
 		B429F278222E3E26000033EC /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429F277222E3E26000033EC /* MenuVC.swift */; };
 		B429F27C222E665C000033EC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429F27B222E665C000033EC /* MenuCell.swift */; };
+		B42FAE9A225317270096096A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FAE99225317270096096A /* ApiClient.swift */; };
+		B42FAE9D225317B80096096A /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FAE9C225317B80096096A /* MenuVM.swift */; };
+		B42FAE9F225318A20096096A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FAE9E225318A20096096A /* Menu.swift */; };
+		B42FAEA222531B050096096A /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FAEA122531B050096096A /* MenuRepository.swift */; };
+		B42FAEA422531EDC0096096A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FAEA322531EDC0096096A /* Extensions.swift */; };
 		B43B8846224BD54300532220 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B8841224BD54200532220 /* IQUITextFieldView+Additions.swift */; };
 		B43B8847224BD54300532220 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B8842224BD54200532220 /* IQUIScrollView+Additions.swift */; };
 		B43B8848224BD54300532220 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B8843224BD54200532220 /* IQUIViewController+Additions.swift */; };
@@ -85,6 +90,11 @@
 		B417E227224B1F1B00E13D74 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B429F277222E3E26000033EC /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B429F27B222E665C000033EC /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		B42FAE99225317270096096A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		B42FAE9C225317B80096096A /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
+		B42FAE9E225318A20096096A /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		B42FAEA122531B050096096A /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
+		B42FAEA322531EDC0096096A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B43B8841224BD54200532220 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		B43B8842224BD54200532220 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		B43B8843224BD54200532220 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
@@ -171,11 +181,12 @@
 		6EF27EB8221CFDB500F34E72 /* NyamNyam */ = {
 			isa = PBXGroup;
 			children = (
-				B43B883F224BD51100532220 /* IQKeyboardManager */,
 				B417E226224B1EFF00E13D74 /* Utils */,
+				B43B883F224BD51100532220 /* IQKeyboardManager */,
+				B42FAE98225317130096096A /* ApiClient */,
 				B4988AFC221D38B900DF0178 /* Model */,
 				B4988AFD221D38C600DF0178 /* View */,
-				B4988AFE221D38D000DF0178 /* ViewModel */,
+				B44B1E152226585800C39B86 /* Features */,
 				6EF27EB9221CFDB500F34E72 /* AppDelegate.swift */,
 				B4988AFF221D38FB00DF0178 /* Resources */,
 			);
@@ -209,20 +220,46 @@
 			path = Foods;
 			sourceTree = "<group>";
 		};
-		B41352FC223960A90060C993 /* Foods */ = {
-			isa = PBXGroup;
-			children = (
-				B41352FD223961510060C993 /* FoodsVC.swift */,
-			);
-			path = Foods;
-			sourceTree = "<group>";
-		};
 		B417E226224B1EFF00E13D74 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				B417E227224B1F1B00E13D74 /* Constant.swift */,
+				B42FAEA322531EDC0096096A /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B42FAE98225317130096096A /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				B42FAE99225317270096096A /* ApiClient.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		B42FAE9B225317870096096A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B42FAE9C225317B80096096A /* MenuVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B42FAEA022531AD40096096A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B42FAEA122531B050096096A /* MenuRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B42FAEA5225323370096096A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B429F277222E3E26000033EC /* MenuVC.swift */,
+				B41352FD223961510060C993 /* FoodsVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B43B883F224BD51100532220 /* IQKeyboardManager */ = {
@@ -290,7 +327,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B44B1E152226585800C39B86 /* Controller */ = {
+		B44B1E152226585800C39B86 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				B4DA2DC6224F504600A6712B /* FavoriteDishes */,
@@ -304,7 +341,7 @@
 				B4EAC8AD223F993600DFEB05 /* Login */,
 				B4FB88E322311FE4008BF05F /* MenuDetailVC.swift */,
 			);
-			path = Controller;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		B44B1E192226597D00C39B86 /* Cell */ = {
@@ -343,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C7FA1022477C7100848590 /* Map */,
+				B42FAE9E225318A20096096A /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,20 +388,12 @@
 		B4988AFD221D38C600DF0178 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B44B1E152226585800C39B86 /* Controller */,
 				B44B1E192226597D00C39B86 /* Cell */,
 				B4EAC8AC223F98DC00DFEB05 /* Helper */,
 				6EF27EBD221CFDB600F34E72 /* Main.storyboard */,
 				B417E224224B1EC000E13D74 /* Login.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		B4988AFE221D38D000DF0178 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B4988AFF221D38FB00DF0178 /* Resources */ = {
@@ -471,8 +501,9 @@
 		B4EAC8B0223F9AAC00DFEB05 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				B41352FC223960A90060C993 /* Foods */,
-				B429F277222E3E26000033EC /* MenuVC.swift */,
+				B42FAEA022531AD40096096A /* Repository */,
+				B42FAE9B225317870096096A /* ViewModel */,
+				B42FAEA5225323370096096A /* Controller */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -539,8 +570,8 @@
 				6EF27EB2221CFDB500F34E72 /* Sources */,
 				6EF27EB3221CFDB500F34E72 /* Frameworks */,
 				6EF27EB4221CFDB500F34E72 /* Resources */,
-				9B819FA423460C9A4553C956 /* [CP] Embed Pods Frameworks */,
 				6F56577530FFECC1DBD19FA8 /* [CP] Copy Pods Resources */,
+				D58E56D9023CA7DC0934494D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -632,7 +663,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NyamNyam/Pods-NyamNyam-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B819FA423460C9A4553C956 /* [CP] Embed Pods Frameworks */ = {
+		D58E56D9023CA7DC0934494D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -641,13 +672,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NyamNyam/Pods-NyamNyam-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -697,6 +736,8 @@
 				B41352FE223961510060C993 /* FoodsVC.swift in Sources */,
 				B43B8846224BD54300532220 /* IQUITextFieldView+Additions.swift in Sources */,
 				B454DA7F222BEC4500057001 /* SettingVC.swift in Sources */,
+				B42FAE9F225318A20096096A /* Menu.swift in Sources */,
+				B42FAE9D225317B80096096A /* MenuVM.swift in Sources */,
 				B4DA2DC4224F4ADD00A6712B /* NewsAndPromotionsVCCell.swift in Sources */,
 				B43B8863224BD5A500532220 /* IQPreviousNextView.swift in Sources */,
 				B4C7FA1222477CA400848590 /* VacationDestination.swift in Sources */,
@@ -712,16 +753,19 @@
 				B43B8848224BD54300532220 /* IQUIViewController+Additions.swift in Sources */,
 				B4BD366822299F9F00AF6BB4 /* GalleryVC.swift in Sources */,
 				B4DA2DC0224F4A8E00A6712B /* NewsAndPromotionsCVC.swift in Sources */,
+				B42FAE9A225317270096096A /* ApiClient.swift in Sources */,
 				B43B8860224BD5A500532220 /* IQInvocation.swift in Sources */,
 				B4DA2DD3224F71A100A6712B /* ReservationСМС.swift in Sources */,
 				6EF27EBA221CFDB500F34E72 /* AppDelegate.swift in Sources */,
 				B43B885F224BD5A500532220 /* IQBarButtonItem.swift in Sources */,
 				B41352FA223957120060C993 /* FoodsVCCell.swift in Sources */,
 				B43B884A224BD54300532220 /* IQUIView+Hierarchy.swift in Sources */,
+				B42FAEA222531B050096096A /* MenuRepository.swift in Sources */,
 				B476CCEB2249354500A659E8 /* OrderDishesVC.swift in Sources */,
 				B43B8853224BD57000532220 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				B43B8854224BD57000532220 /* IQKeyboardManager.swift in Sources */,
 				B417E228224B1F1B00E13D74 /* Constant.swift in Sources */,
+				B42FAEA422531EDC0096096A /* Extensions.swift in Sources */,
 				B429F278222E3E26000033EC /* MenuVC.swift in Sources */,
 				B4A0CCCA22267294000028A2 /* LoginVC.swift in Sources */,
 				B4DA2DCE224F50E500A6712B /* FavoriteDishesVCCell.swift in Sources */,
@@ -883,7 +927,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aranei.NyamNyam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -904,7 +948,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aranei.NyamNyam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
