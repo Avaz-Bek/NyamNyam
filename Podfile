@@ -9,8 +9,7 @@ target 'NyamNyam' do
 
   pod 'GoogleMaps'
   pod 'GooglePlaces'
-  pod 'Alamofire'
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'ObjectMapper'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end

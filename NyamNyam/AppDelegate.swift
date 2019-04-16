@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyC7X1dYqbGTBvoXI8UPWRLWWYFpZ52dnrc")
         
         IQKeyboardManager.shared.enable = true
+        
+        FirebaseApp.configure()
         return true
     }
 

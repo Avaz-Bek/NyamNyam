@@ -27,9 +27,6 @@ class SettingVC: UITableViewController {
             if let foodsVC = self.storyboard?.instantiateViewController(withIdentifier: "FavoriteDishesCVC") as?  FavoriteDishesCVC {
                 foodsVC.imageNameArray = self.mainFoodsName[indexPath.row]
                 
-                print(mainFoodsName[indexPath.row])
-                print(foodsVC.imageNameArray)
-                
                 self.navigationController?.pushViewController(foodsVC, animated: true)
             }
         }else if indexPath.row == 2{
@@ -45,6 +42,14 @@ class SettingVC: UITableViewController {
         }
     }
     
+    
+    
+    
+    
+    @IBAction func loginButton(_ sender: UIButton) {
+        sender.buttonEffect(sender: sender)
+        
+    }
     // MARK: - Table view data source
     
     //    override func numberOfSections(in tableView: UITableView) -> Int {

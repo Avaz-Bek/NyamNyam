@@ -38,7 +38,6 @@ class FoodsVC: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(imageNameArray.count)
         return imageNameArray.count
     }
     
@@ -197,31 +196,6 @@ extension FoodsVC:UISearchBarDelegate{
     }
 }
 
-
-extension CALayer {
-    func addBorder(edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
-        
-        let border = CALayer()
-        
-        switch edge {
-        case UIRectEdge.top:
-            border.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: thickness)
-            
-        case UIRectEdge.bottom:
-            border.frame = CGRect(x: 0, y: self.bounds.height - thickness,  width: UIScreen.main.bounds.width, height: thickness)
-            
-        case UIRectEdge.left:
-            border.frame = CGRect(x: 0, y: 0,  width: thickness, height: self.bounds.height)
-            
-        case UIRectEdge.right:
-            border.frame = CGRect(x: self.bounds.width - thickness, y: 0,  width: thickness, height: self.bounds.height)
-        default:
-            break
-        }
-        border.backgroundColor = color.cgColor;
-        self.addSublayer(border)
-    }
-}
 
 extension UIButton{
     func orderButtonEffect(sender:UIButton) {

@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginVC: UIViewController ,UITextFieldDelegate{
     
@@ -168,8 +170,64 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
     
     
     // MARK: - register for loginRegisterGuestButton
-    @objc func handleRegister(){
-        if loginRegisterGuestSegmentedControl.selectedSegmentIndex == 2 {
+    @objc func handleRegister(sender:UIButton){
+        if loginRegisterGuestSegmentedControl.selectedSegmentIndex == 0 {
+            
+            guard let email = emailTextField.text, emailTextField.text?.characters.count != 0  else {
+                loginRegisterGuestButton.shake(sender: sender)
+                return
+            }
+            
+            guard let password = passwordTextField.text, passwordTextField.text?.characters.count != 0  else {
+                loginRegisterGuestButton.shake(sender: sender)
+                return
+            }
+            
+            if email.isValidEmail(testStr: email) == false{
+                loginRegisterGuestButton.shake(sender: loginRegisterGuestButton)
+            }else if password.isValidPassword(testStr: password) == false{
+                loginRegisterGuestButton.shake(sender: sender)
+            }else{
+                loginRegisterGuestButton.pulsate(sender: sender)
+                
+                
+                
+                
+            }
+            
+        } else if loginRegisterGuestSegmentedControl.selectedSegmentIndex == 1 {
+            
+            guard let username = nameTextField.text, nameTextField.text?.characters.count != 0  else {
+                loginRegisterGuestButton.shake(sender: sender)
+                return
+            }
+            
+            guard let email = emailTextField.text, emailTextField.text?.characters.count != 0  else {
+                loginRegisterGuestButton.shake(sender: sender)
+                return
+            }
+            
+            guard let password = passwordTextField.text, passwordTextField.text?.characters.count != 0  else {
+                loginRegisterGuestButton.shake(sender: sender)
+                return
+            }
+            
+            if username.isValidUsername(testStr: username){
+                loginRegisterGuestButton.shake(sender: loginRegisterGuestButton)
+            }else if email.isValidEmail(testStr: email) == false{
+                loginRegisterGuestButton.shake(sender: loginRegisterGuestButton)
+            }else if password.isValidPassword(testStr: password) == false{
+                loginRegisterGuestButton.shake(sender: sender)
+            }else{
+                loginRegisterGuestButton.pulsate(sender: sender)
+                
+                
+                
+            }
+            
+        }else if loginRegisterGuestSegmentedControl.selectedSegmentIndex == 2 {
+            loginRegisterGuestButton.pulsate(sender: loginRegisterGuestButton)
+            
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
             self.present(vc!, animated: true, completion: nil)
         }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RxSwift
 
 private let reuseIdentifier = "menuItemIdentifier"
 
@@ -16,9 +15,6 @@ class MenuVC: UIViewController{
     
     //MARK: - Outlets
     @IBOutlet weak var myCollectionView: UICollectionView!
-    let menuVM = MenuVM()
-    var menues = [Menu]()
-    let disposeBag = DisposeBag()
     // MARK: - Properties
     let foodsName:[[String]]  = [   ["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"]
     ]
@@ -42,7 +38,7 @@ class MenuVC: UIViewController{
         
         
         let itemWidth = UIScreen.main.bounds.size.width/2-24
-        let itemHeight = UIScreen.main.bounds.size.height/4
+        let itemHeight = UIScreen.main.bounds.size.height/3-20
         
         
         let layout = UICollectionViewFlowLayout()
@@ -55,18 +51,7 @@ class MenuVC: UIViewController{
         
         
         myCollectionView.collectionViewLayout = layout
-        getFoods()
-    }
-    
-    
-    func getFoods() {
-        self.menuVM.getFoods()
-        self.menuVM.menuBR.skip(1).subscribe(onNext: { (menues) in
-            self.menues = menues
-            self.myCollectionView.reloadData()
-        }, onError: { (error) in
-            print(error.localizedDescription)
-        }).disposed(by: self.disposeBag)
+
     }
     
     //      MARK: - Navigation
