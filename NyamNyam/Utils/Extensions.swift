@@ -50,6 +50,68 @@ extension NSError {
     }
 }
 
+
+// MARK - textFieldEffects
+//MARK: - button efects
+extension UITextField{
+    func pulsate(sender:UITextField) {
+        
+        let pulsate = CASpringAnimation(keyPath: "transform.scale")
+        pulsate.duration = 0.0
+        pulsate.repeatCount = 0
+        pulsate.autoreverses = false
+        pulsate.fromValue = 0.96
+        pulsate.toValue = 0.99
+        pulsate.autoreverses = false
+        pulsate.initialVelocity = 0
+        pulsate.damping = 0
+        layer.add(pulsate, forKey: nil)
+        
+    }
+    
+    
+    func shake(sender:UITextField) {
+        
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        
+        
+        let fromPoint = CGPoint(x: center.x - 5, y: center.y)
+        let fromValue = NSValue(cgPoint: fromPoint)
+        
+        let toPoint = CGPoint(x: center.x + 5, y: center.y)
+        let toValue = NSValue(cgPoint: toPoint)
+        
+        shake.fromValue = fromValue
+        shake.toValue = toValue
+        
+        layer.add(shake, forKey: nil)
+        
+    }
+    
+    func flash(sender:UITextField) {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            sender.alpha = 1
+            sender.backgroundColor = UIColor.orange
+        }, completion: { completed in
+            if completed {
+                UIView.animate(withDuration: 0.3, animations: {
+                    sender.backgroundColor = UIColor.clear
+                }, completion: { completed in
+                    if completed {
+                    }
+                })
+            }
+        })
+        
+    }
+    
+    
+}
+
 //MARK: - button efects
 extension UIButton{
     func pulsate(sender:UIButton) {

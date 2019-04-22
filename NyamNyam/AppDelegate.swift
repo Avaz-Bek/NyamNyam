@@ -19,12 +19,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
  
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: TabBarVC())
+        window?.makeKeyAndVisible()
+        
         GMSPlacesClient.provideAPIKey("AIzaSyC7X1dYqbGTBvoXI8UPWRLWWYFpZ52dnrc")
         GMSServices.provideAPIKey("AIzaSyC7X1dYqbGTBvoXI8UPWRLWWYFpZ52dnrc")
-        
         IQKeyboardManager.shared.enable = true
         
         FirebaseApp.configure()
+        
+        
+        if let user = Auth.auth().currentUser{
+            
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let nav = storyboard.instantiateViewController(withIdentifier: "tabBarVC")
+            
+            self.window?.rootViewController = nav
+        }else{
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let nav = storyboard.instantiateViewController(withIdentifier: "loginVC")
+            
+            self.window?.rootViewController = nav
+        }
         return true
     }
 

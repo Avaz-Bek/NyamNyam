@@ -104,7 +104,7 @@ extension FavoriteDishesCVC: UICollectionViewDelegateFlowLayout{
 extension FavoriteDishesCVC: FavoriteDishesDelegate{
     
     func didTapOrderButton(_ btn: UIButton) {
-        btn.orderButtonEffect(sender: btn)
+        btn.payButtonEffect(sender: btn)
         
         let alert = UIAlertController(title: "Хотите заказать?", message: "Нажав на кнопку Заказать, вы попадёте на страницу для заполнения обязательных полей", preferredStyle: UIAlertController.Style.alert)
         

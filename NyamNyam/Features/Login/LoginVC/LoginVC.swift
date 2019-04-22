@@ -10,23 +10,29 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
+import MMProgressHUD
 
 class LoginVC: UIViewController ,UITextFieldDelegate{
     
     
     
+    @IBOutlet weak var profileImageView: UIImageView!
     // MARK: - ProfileImageView
-    var profileImageView:UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "logo")
-        imageView.layer.masksToBounds = true
-        //imageView.layer.cornerRadius = 75
-        
-        imageView.translatesAutoresizingMaskIntoConstraints = false 
-        imageView.contentMode = .scaleAspectFill
-        
-        return imageView
-    }()
+//    var profileImageView:UIImageView = {
+//
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "")
+//        imageView.backgroundColor = UIColor.red
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.contentMode = .scaleAspectFill
+//
+////        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+//
+//        //imageView.addGestureRecognizer(tapGestureRecognizer)
+//        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(taped)))
+//        imageView.isUserInteractionEnabled = true
+//        return imageView
+//    }()
     
     
     // MARK: - UISigmentedController
@@ -77,6 +83,7 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
     // MARK: - EmailTextField
     var emailTextField:UITextField = {
         let tf = UITextField()
+        
         tf.keyboardType  = .emailAddress
         tf.textAlignment = .center
         tf.attributedPlaceholder = NSAttributedString(string:"example@gmail.com", attributes:[NSAttributedString.Key.foregroundColor: UIColor.orange,NSAttributedString.Key.font :UIFont(name: "Arial", size: 13)!])
@@ -131,9 +138,9 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
     var emailTextFieldHeightAnchor:NSLayoutConstraint?
     var passwordTextFieldHeightAnchor:NSLayoutConstraint?
     
-
-
-   
+    
+    
+    
     // MARK: - textFieldShouldReturn
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -148,6 +155,8 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
         return true
     }
     
+    var userVM : LoginVM?
+    var user : User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,69 +167,155 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
         
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterGuestButton)
-        view.addSubview(profileImageView)
+       // view.addSubview(profileImageView)
         view.addSubview(loginRegisterGuestSegmentedControl)
         
         setupInputContainerView()
         setupLoginRegisterButton()
-        setupProfileImageView()
+        //setupProfileImageView()
         setupLoginRegisterGuestSegmentController()
+        //profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector()))
+        profileImageView.isUserInteractionEnabled = true
     }
-    
     
     
     // MARK: - register for loginRegisterGuestButton
     @objc func handleRegister(sender:UIButton){
+        
         if loginRegisterGuestSegmentedControl.selectedSegmentIndex == 0 {
             
-            guard let email = emailTextField.text, emailTextField.text?.characters.count != 0  else {
+            
+            
+            guard let email = emailTextField.text, emailTextField.text?.count != 0  else {
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Введите адрес почты")
                 loginRegisterGuestButton.shake(sender: sender)
                 return
             }
             
-            guard let password = passwordTextField.text, passwordTextField.text?.characters.count != 0  else {
+            guard let password = passwordTextField.text, passwordTextField.text?.count != 0  else {
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Введите пароль")
                 loginRegisterGuestButton.shake(sender: sender)
                 return
             }
             
             if email.isValidEmail(testStr: email) == false{
-                loginRegisterGuestButton.shake(sender: loginRegisterGuestButton)
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Адрес почты неправильно")
+                emailTextField.shake(sender: emailTextField)
+                //loginRegisterGuestButton.shake(sender: loginRegisterGuestButton)
             }else if password.isValidPassword(testStr: password) == false{
-                loginRegisterGuestButton.shake(sender: sender)
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Пароль должен содержать не менее 6 символов и цифры", afterDelay: 2)
+                passwordTextField.shake(sender: passwordTextField)
+                //loginRegisterGuestButton.shake(sender: sender)
             }else{
+                
+                
+                
+                Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+                    
+                    MMProgressHUD.show(withTitle: "Авторизация", status: "", image: UIImage(named: ""))
+                    
+                    if error == nil && user != nil{
+                        
+                        MMProgressHUD.dismiss(withSuccess: "Успешна")
+                        
+                        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil) as UIStoryboard
+                        let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "tabBarVC") as! TabBarVC
+                        
+                        self?.present(tabBarVC, animated: true, completion: nil)
+                        return
+                    }else{
+                        
+                        MMProgressHUD.dismissWithError("Не успешна")
+                    }
+                    
+                }
+                
                 loginRegisterGuestButton.pulsate(sender: sender)
-                
-                
-                
                 
             }
             
         } else if loginRegisterGuestSegmentedControl.selectedSegmentIndex == 1 {
             
-            guard let username = nameTextField.text, nameTextField.text?.characters.count != 0  else {
+            guard let username = nameTextField.text, nameTextField.text?.count != 0  else {
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Введите имя пользователя")
                 loginRegisterGuestButton.shake(sender: sender)
                 return
             }
             
-            guard let email = emailTextField.text, emailTextField.text?.characters.count != 0  else {
+            guard let email = emailTextField.text, emailTextField.text?.count != 0  else {
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Введите адрес почты")
                 loginRegisterGuestButton.shake(sender: sender)
                 return
             }
             
-            guard let password = passwordTextField.text, passwordTextField.text?.characters.count != 0  else {
+            guard let password = passwordTextField.text, passwordTextField.text?.count != 0  else {
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Введите пароль")
                 loginRegisterGuestButton.shake(sender: sender)
                 return
             }
             
             if username.isValidUsername(testStr: username){
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Пароль должен содержать не менее 6 символов и цифры", afterDelay: 2)
                 loginRegisterGuestButton.shake(sender: loginRegisterGuestButton)
             }else if email.isValidEmail(testStr: email) == false{
+                MMProgressHUD.dismissWithError("Адрес почты неправильно")
                 loginRegisterGuestButton.shake(sender: loginRegisterGuestButton)
             }else if password.isValidPassword(testStr: password) == false{
+                MMProgressHUD.show()
+                MMProgressHUD.dismissWithError("Пароль должен содержать не менее 6 символов и цифры", afterDelay: 2)
                 loginRegisterGuestButton.shake(sender: sender)
             }else{
                 loginRegisterGuestButton.pulsate(sender: sender)
                 
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    
+                    MMProgressHUD.show(withTitle: "Регистрация", status: "", image: UIImage(named: ""))
+                    
+                    if error == nil && authResult != nil{
+                        MMProgressHUD.dismiss(withSuccess: "Успешна")
+                        FIRFirestoreService.shared.reference(to: .user).document(FIRFirestoreService.shared.getUserID()).setData([
+                            "username": username,
+                            "email": email,
+                        ]) { err in
+                            
+                            if err != nil {
+                                
+                            } else {
+                                
+                                
+                            }
+                            
+                        }
+                        
+                        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+                            
+                            guard let strongSelf = self else { return }
+                            
+                            if error == nil && user != nil{
+                                
+                                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil) as UIStoryboard
+                                let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "tabBarVC") as! TabBarVC
+                                
+                                self?.present(tabBarVC, animated: true, completion: nil)
+                                return
+                            }else{
+                                
+                            }
+                            
+                        }
+                    }else{
+                        MMProgressHUD.dismissWithError("Не успешна")
+                    }
+                    
+                }
                 
                 
             }
@@ -228,12 +323,11 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
         }else if loginRegisterGuestSegmentedControl.selectedSegmentIndex == 2 {
             loginRegisterGuestButton.pulsate(sender: loginRegisterGuestButton)
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarVC")
             self.present(vc!, animated: true, completion: nil)
         }
         
     }
-    
     
     // MARK: - setup Functions
     @objc func handleLoginRegisterGuestChange(){
@@ -279,11 +373,27 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
     }
     
     
+    func showToast(controller:UIViewController,title:String,message:String,time:Double,color:CGColor) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.view.layer.cornerRadius = 15
+        alert.view.layer.masksToBounds = true
+        alert.view.layer.borderWidth = 1
+        alert.view.layer.borderColor = color
+        self.present(alert, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time){
+            alert.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+
+    
     func setupProfileImageView(){
         profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         profileImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: -150).isActive = true
-        profileImageView.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        profileImageView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
     
@@ -297,7 +407,7 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
     
     func setupLoginRegisterGuestSegmentController(){
         loginRegisterGuestSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loginRegisterGuestSegmentedControl.topAnchor.constraint(equalTo: profileImageView.bottomAnchor,constant:-50).isActive = true
+        loginRegisterGuestSegmentedControl.topAnchor.constraint(equalTo: profileImageView.bottomAnchor,constant:8).isActive = true
         loginRegisterGuestSegmentedControl.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor,multiplier:1).isActive = true
         loginRegisterGuestSegmentedControl.heightAnchor.constraint(equalToConstant: 36).isActive = true
         
@@ -315,30 +425,30 @@ class LoginVC: UIViewController ,UITextFieldDelegate{
         inputsContainerView.addSubview(nameTextField)
         inputsContainerView.addSubview(emailTextField)
         inputsContainerView.addSubview(passwordTextField)
-            nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor,constant:5).isActive = true
-            nameTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
-            nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/4)
-            nameTextFieldHeightAnchor?.isActive = true
+        nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor,constant:5).isActive = true
+        nameTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/4)
+        nameTextFieldHeightAnchor?.isActive = true
         
-            emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor,constant:7).isActive = true
-            emailTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
-            emailTextFieldHeightAnchor = emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/4)
-            emailTextFieldHeightAnchor?.isActive = true
-
-            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor,constant:5).isActive = true
-            passwordTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
-            passwordTextFieldHeightAnchor = passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/4)
-            passwordTextFieldHeightAnchor?.isActive = true
+        emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor,constant:7).isActive = true
+        emailTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        emailTextFieldHeightAnchor = emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/4)
+        emailTextFieldHeightAnchor?.isActive = true
+        
+        passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor,constant:5).isActive = true
+        passwordTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        passwordTextFieldHeightAnchor = passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/4)
+        passwordTextFieldHeightAnchor?.isActive = true
         
     }
     
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
     
-
+    
 }

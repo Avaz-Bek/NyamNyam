@@ -12,4 +12,8 @@ target 'NyamNyam' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'MMProgressHUD'
+  pod 'ObjectMapper'
+  pod 'RxSwift'
 end

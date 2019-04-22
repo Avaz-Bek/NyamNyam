@@ -7,14 +7,37 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import MMProgressHUD
 
 class SettingVC: UITableViewController {
     
     let mainFoodsName:[[String]]  = [   ["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"],["povar1","povar2","images","images","povar3","images","images","images","povar3","images","images","images-1","povar3","images","povar4","images","images","images","images","images","povar1"]
     ]
     
+    
+    @IBOutlet weak var logInOutButton: UIButton!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var email: UILabel!
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let user = Auth.auth().currentUser{
+            logInOutButton.titleLabel?.textColor = UIColor.red
+            logInOutButton.setTitle("Выйти", for: .normal)
+            
+            let docRef = self.db.collection("user").document(user.uid)
+            docRef.addSnapshotListener { (user, error) in
+    
+                guard let user = user else {return }
+               
+                self.userName.text = user.get("username").map(String.init(describing:)) ?? "nil"
+                self.email.text = user.get("email").map(String.init(describing:)) ?? "nil"
+            }
+        }
     }
     
     
@@ -49,6 +72,16 @@ class SettingVC: UITableViewController {
     @IBAction func loginButton(_ sender: UIButton) {
         sender.buttonEffect(sender: sender)
         
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "loginVC")
+            self.present(vc!, animated: true, completion: nil)
+            
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
     // MARK: - Table view data source
     
